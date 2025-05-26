@@ -10,4 +10,4 @@ Contains source files for generating netlists based on parameter configurations 
 Contains results of Global Placement using RePlAce, and DEF and Gate-Level Netlists of training and test designs as required by DREAMPlace script.
 
 ## transport_informed_dreamplace
-Contains our fork of the DREAMPlace repository with our implementation of the Flow Based Density Overflow operation. When you navigate to this forked submodule, please view the top of the README, which contains a link to our code and current progress.
+Contains our fork of the DREAMPlace repository with our implementation of the Flow Based Density Overflow operation. When you navigate to this forked submodule, please view the top of the README, which contains a link to our code and current progress. We've included our report at this level of the repo as well titled: Transport Informed Gradient Fields for Global Placement
