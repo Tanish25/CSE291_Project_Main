@@ -8,3 +8,6 @@ Contains source files for generating netlists based on parameter configurations 
 
 ## RePLACE_Baseline
 Contains results of Global Placement using RePlAce, and DEF and Gate-Level Netlists of training and test designs as required by DREAMPlace script.
+
+## transport_informed_dreamplace
+Contains our fork of the DREAMPlace repository with our implementation of the Flow Based Density Overflow operation. When you navigate to this forked submodule, please view the top of the README, which contains a link to our code and current progress.
