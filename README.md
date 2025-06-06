@@ -15,7 +15,9 @@ For the current project, we are buidling our custom machine learning model (that
 We have segregated this repository into three directories -
 
 --> Baseline_No_Place_Init: This contains results using RePlAce global placer without placement initialization.
+
 --> Baseline_DREAMPlace: This contains results using RePlAce global placer with DREAMPlace-based placement initialization.
+
 --> Baseline_Transport_Informed_DREAMPlace: This contains results using RePlAce global placer with Transport-Informed DREAMPlace-based placement initialization.
 
 ## transport_informed_dreamplace
