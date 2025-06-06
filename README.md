@@ -16,9 +16,9 @@ We have segregated this repository into three directories -
 
 --> Baseline_No_Place_Init: This contains results using RePlAce global placer without placement initialization.
 
---> Baseline_DREAMPlace: This contains results using RePlAce global placer with DREAMPlace-based placement initialization.
+--> Baseline_DREAMPlace: This contains results using RePlAce global placer with DREAMPlace-based placement initialization. Also has files required by DREAMPlace script to produce placement initialization.
 
---> Baseline_Transport_Informed_DREAMPlace: This contains results using RePlAce global placer with Transport-Informed DREAMPlace-based placement initialization.
+--> Baseline_Transport_Informed_DREAMPlace: This contains results using RePlAce global placer with Transport-Informed DREAMPlace-based placement initialization. Also has files required by Transport-Informed DREAMPlace script to produce placement initialization.
 
 ## transport_informed_dreamplace
 Contains our fork of the DREAMPlace repository with our implementation of the Flow Based Density Overflow operation. When you navigate to this forked submodule, please view the top of the README, which contains a link to our code and current progress. We've included our report at this level of the repo as well titled: Transport Informed Gradient Fields for Global Placement
