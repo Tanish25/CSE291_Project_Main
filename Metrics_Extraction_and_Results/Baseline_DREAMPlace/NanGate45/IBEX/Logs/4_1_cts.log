@@ -1,0 +1,179 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+clock_tree_synthesis -sink_clustering_enable -balance_levels -sink_clustering_size 50 -sink_clustering_max_diameter 20
+[INFO CTS-0050] Root buffer is CLKBUF_X3.
+[INFO CTS-0051] Sink buffer is CLKBUF_X3.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    CLKBUF_X3
+[INFO CTS-0049] Characterization buffer is CLKBUF_X3.
+[INFO CTS-0007] Net "clk_i" found for clock "core_clock".
+[INFO CTS-0011]  Clock net "clk_i" for macros has 1 sinks.
+[INFO CTS-0011]  Clock net "clk_i_regs" for registers has 995 sinks.
+[INFO CTS-0010]  Clock net "clk" has 937 sinks.
+[INFO CTS-0008] TritonCTS found 3 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk_i.
+[INFO CTS-0028]  Total number of sinks: 1.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 50 and with maximum cluster diameter of 20.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 14000  dbu (7 um).
+[INFO CTS-0023]  Original sink region: [(216845, 15225), (216845, 15225)].
+[INFO CTS-0024]  Normalized sink region: [(15.4889, 1.0875), (15.4889, 1.0875)].
+[INFO CTS-0025]     Width:  0.0000.
+[INFO CTS-0026]     Height: 0.0000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1
+    Sub-region size: 0.0000 X 0.0000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 1.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk_i_regs.
+[INFO CTS-0028]  Total number of sinks: 995.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 50 and with maximum cluster diameter of 20.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 14000  dbu (7 um).
+[INFO CTS-0204] A clustering solution was found from clustering size of 50 and clustering diameter of 20.
+[INFO CTS-0205] Better solution may be possible if either -sink_clustering_size, -sink_clustering_max_diameter, or both options are omitted to enable automatic clustering.
+[INFO CTS-0019]  Total number of sinks after clustering: 80.
+[INFO CTS-0024]  Normalized sink region: [(0.542435, 1.1625), (15.3043, 30.8667)].
+[INFO CTS-0025]     Width:  14.7619.
+[INFO CTS-0026]     Height: 29.7042.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 40
+    Sub-region size: 14.7619 X 14.8521
+[INFO CTS-0034]     Segment length (rounded): 8.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 20
+    Sub-region size: 7.3809 X 14.8521
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 10
+    Sub-region size: 7.3809 X 7.4260
+[INFO CTS-0034]     Segment length (rounded): 4.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 80.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 937.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 50 and with maximum cluster diameter of 20.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 14000  dbu (7 um).
+[INFO CTS-0204] A clustering solution was found from clustering size of 50 and clustering diameter of 20.
+[INFO CTS-0205] Better solution may be possible if either -sink_clustering_size, -sink_clustering_max_diameter, or both options are omitted to enable automatic clustering.
+[INFO CTS-0019]  Total number of sinks after clustering: 123.
+[INFO CTS-0024]  Normalized sink region: [(8.53434, 0.726837), (33.7986, 28.33)].
+[INFO CTS-0025]     Width:  25.2643.
+[INFO CTS-0026]     Height: 27.6032.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 62
+    Sub-region size: 25.2643 X 13.8016
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 31
+    Sub-region size: 12.6321 X 13.8016
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 16
+    Sub-region size: 12.6321 X 6.9008
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 4
+    Direction: Horizontal
+    Sinks per sub-region: 8
+    Sub-region size: 6.3161 X 6.9008
+[INFO CTS-0034]     Segment length (rounded): 4.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 123.
+[INFO CTS-0018]     Created 2 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 2 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:1..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0018]     Created 88 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 88 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 3:2, 5:4, 6:3, 7:2, 8:7, 9:4, 10:10, 11:9, 12:13, 13:2, 14:4, 15:5, 16:4, 17:4, 18:5, 19:2, 20:2, 21:2, 22:1, 23:1, 25:1..
+[INFO CTS-0017]     Max level of the clock tree: 3.
+[INFO CTS-0018]     Created 135 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 135 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 2:7, 3:6, 4:5, 5:13, 6:22, 7:18, 8:9, 9:15, 10:5, 11:10, 12:10, 13:7, 14:4, 15:2, 16:1..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0124] Clock net "clk_i"
+[INFO CTS-0125]  Sinks 1
+[INFO CTS-0098] Clock net "clk_i_regs"
+[INFO CTS-0099]  Sinks 1069
+[INFO CTS-0100]  Leaf buffers 79
+[INFO CTS-0101]  Average sink wire length 111.30 um
+[INFO CTS-0102]  Path depth 2 - 3
+[INFO CTS-0207]  Leaf load cells 190
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 1053
+[INFO CTS-0100]  Leaf buffers 118
+[INFO CTS-0101]  Average sink wire length 257.66 um
+[INFO CTS-0102]  Path depth 2 - 3
+[INFO CTS-0207]  Leaf load cells 190
+[INFO RSZ-0058] Using max wire length 640um.
+Placement Analysis
+---------------------------------
+total displacement       1027.0 u
+average displacement        0.1 u
+max displacement            4.3 u
+original HPWL          275930.2 u
+legalized HPWL         279612.4 u
+delta HPWL                    1 %
+
+repair_timing -verbose -setup_margin 0 -hold_margin 0 -repair_tns 100
+[INFO RSZ-0094] Found 631 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 631 out of 631 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -0.319 |      -63.1 |    631 | gen_regfile_ff.register_file_i.rf_reg\[575\]$_DFFE_PN0P_/D
+       10 |       0 |       1 |       10 |      0 |     4 |    +0.0% |   -0.308 |      -60.0 |    631 | gen_regfile_ff.register_file_i.rf_reg\[575\]$_DFFE_PN0P_/D
+       20 |       0 |       5 |       22 |      0 |     4 |    +0.0% |   -0.292 |      -51.3 |    631 | instr_addr_o[29]
+       30 |       0 |       8 |       33 |      0 |     8 |    +0.1% |   -0.283 |      -46.6 |    631 | instr_addr_o[29]
+       40 |       0 |      11 |       42 |      0 |    11 |    +0.1% |   -0.266 |      -45.1 |    631 | gen_regfile_ff.register_file_i.rf_reg\[575\]$_DFFE_PN0P_/D
+       50 |       0 |      17 |       44 |      0 |    14 |    +0.1% |   -0.254 |      -41.6 |    631 | instr_addr_o[29]
+       60 |       0 |      19 |       46 |      0 |    21 |    +0.1% |   -0.240 |      -40.3 |    631 | gen_regfile_ff.register_file_i.rf_reg\[575\]$_DFFE_PN0P_/D
+       70 |       0 |      22 |       49 |      0 |    27 |    +0.1% |   -0.229 |      -38.4 |    631 | instr_addr_o[29]
+       80 |       0 |      24 |       57 |      1 |    30 |    +0.2% |   -0.219 |      -36.8 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+       90 |       0 |      31 |       59 |      1 |    32 |    +0.2% |   -0.221 |      -36.3 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      100 |       0 |      35 |       62 |      1 |    37 |    +0.2% |   -0.211 |      -34.7 |    631 | instr_addr_o[29]
+      110 |       0 |      38 |       68 |      2 |    40 |    +0.2% |   -0.205 |      -34.1 |    631 | instr_addr_o[30]
+      120 |       0 |      42 |       72 |      2 |    44 |    +0.2% |   -0.204 |      -33.6 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      130 |       0 |      49 |       72 |      3 |    46 |    +0.3% |   -0.219 |      -36.1 |    631 | gen_regfile_ff.register_file_i.rf_reg\[575\]$_DFFE_PN0P_/D
+      140 |       0 |      59 |       72 |      3 |    46 |    +0.3% |   -0.220 |      -36.2 |    631 | gen_regfile_ff.register_file_i.rf_reg\[735\]$_DFFE_PN0P_/D
+      150 |       0 |      69 |       72 |      3 |    46 |    +0.4% |   -0.221 |      -36.2 |    631 | gen_regfile_ff.register_file_i.rf_reg\[575\]$_DFFE_PN0P_/D
+      160 |       0 |      77 |       72 |      4 |    47 |    +0.4% |   -0.228 |      -37.5 |    631 | gen_regfile_ff.register_file_i.rf_reg\[671\]$_DFFE_PN0P_/D
+      169 |       0 |      50 |       72 |      2 |    43 |    +0.2% |   -0.199 |      -33.4 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      170 |       0 |      50 |       72 |      2 |    43 |    +0.2% |   -0.199 |      -33.4 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      180 |       0 |      55 |       75 |      2 |    47 |    +0.3% |   -0.217 |      -35.0 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      190 |       0 |      62 |       75 |      4 |    48 |    +0.4% |   -0.217 |      -35.2 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      195 |       0 |      54 |       75 |      2 |    43 |    +0.2% |   -0.197 |      -33.2 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      200 |       0 |      56 |       75 |      2 |    45 |    +0.3% |   -0.211 |      -35.6 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      210 |       0 |      63 |       75 |      4 |    46 |    +0.4% |   -0.208 |      -36.3 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      220 |       0 |      71 |       75 |      5 |    47 |    +0.4% |   -0.202 |      -33.2 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      230 |       0 |      79 |       75 |      5 |    49 |    +0.4% |   -0.207 |      -34.4 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      240 |       0 |      87 |       75 |      7 |    49 |    +0.5% |   -0.216 |      -38.5 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      244 |       0 |      57 |       75 |      2 |    44 |    +0.2% |   -0.197 |      -33.1 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      250 |       0 |      61 |       75 |      2 |    45 |    +0.3% |   -0.197 |      -32.6 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
+      260 |       1 |      66 |       75 |      3 |    48 |    +0.3% |   -0.226 |      -32.9 |    631 | instr_addr_o[29]
+      270 |       2 |      73 |       78 |      3 |    49 |    +0.3% |   -0.197 |      -31.8 |    631 | gen_regfile_ff.register_file_i.rf_reg\[927\]$_DFFE_PN0P_/D
