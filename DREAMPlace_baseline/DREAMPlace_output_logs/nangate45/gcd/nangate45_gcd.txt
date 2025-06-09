@@ -1,0 +1,2106 @@
+========================================================
+                       DREAMPlace
+            Yibo Lin (http://yibolin.com)
+   David Z. Pan (http://users.ece.utexas.edu/~dpan)
+========================================================
+[INFO   ] DREAMPlace - parameters = {'aux_input': '', 'lef_input': ['train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.tech.lef', 'train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.lef', 'train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef', 'train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.rect.lef'], 'def_input': 'train_and_test_sample_metadata/train_and_test_sample_metadata/def/nangate45/gcd/3_2_place_iop.def', 'verilog_input': 'train_and_test_sample_metadata/train_and_test_sample_metadata/netlists/nangate45/gcd/1_synth.v', 'gpu': 0, 'num_bins_x': 512, 'num_bins_y': 512, 'global_place_stages': [{'num_bins_x': 512, 'num_bins_y': 512, 'iteration': 275, 'learning_rate': 0.001, 'wirelength': 'weighted_average', 'optimizer': 'nesterov', 'Llambda_density_weight_iteration': 1, 'Lsub_iteration': 1}], 'target_density': 0.2, 'density_weight': 8e-05, 'random_seed': 1000, 'result_dir': 'results', 'scale_factor': 1, 'shift_factor': [0.0, 0.0], 'ignore_net_degree': 100, 'gp_noise_ratio': 0.025, 'enable_fillers': 1, 'global_place_flag': 1, 'legalize_flag': 0, 'abacus_legalize_flag': 1, 'detailed_place_flag': 0, 'stop_overflow': 0.07, 'dtype': 'float32', 'detailed_place_engine': '', 'detailed_place_command': '', 'plot_flag': 0, 'RePlAce_ref_hpwl': 350000, 'RePlAce_LOWER_PCOF': 0.95, 'RePlAce_UPPER_PCOF': 1.05, 'gamma': 4.0, 'RePlAce_skip_energy_flag': 0, 'random_center_init_flag': 1, 'gift_init_flag': 0, 'gift_init_scale': 0.7, 'sort_nets_by_degree': 0, 'num_threads': 8, 'dump_global_place_solution_flag': 0, 'dump_legalize_solution_flag': 0, 'routability_opt_flag': 0, 'route_num_bins_x': 512, 'route_num_bins_y': 512, 'node_area_adjust_overflow': 0.15, 'max_num_area_adjust': 3, 'adjust_nctugr_area_flag': 0, 'adjust_rudy_area_flag': 1, 'adjust_pin_area_flag': 1, 'area_adjust_stop_ratio': 0.01, 'route_area_adjust_stop_ratio': 0.01, 'pin_area_adjust_stop_ratio': 0.05, 'unit_horizontal_capacity': 1.5625, 'unit_vertical_capacity': 1.45, 'unit_pin_capacity': 0.058, 'max_route_opt_adjust_rate': 2.0, 'route_opt_adjust_exponent': 2.0, 'pin_stretch_ratio': 1.414213562, 'max_pin_opt_adjust_rate': 1.5, 'deterministic_flag': 1, 'timing_opt_flag': 0, 'early_lib_input': '', 'late_lib_input': '', 'lib_input': '', 'sdc_input': '', 'wire_resistance_per_micron': 0, 'wire_capacitance_per_micron': 0, 'net_weighting_scheme': 'lilith', 'momentum_decay_factor': 0.5, 'enable_net_weighting': 1, 'max_net_weight': 'inf', 'use_bb': 0, 'macro_place_flag': 0, 'two_stage_density_scaler': 1000, 'macro_halo_x': 0, 'macro_halo_y': 0}
+[INFO   ] lef_input = train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.tech.lef train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.lef train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.rect.lef 
+[INFO   ] def_input = train_and_test_sample_metadata/train_and_test_sample_metadata/def/nangate45/gcd/3_2_place_iop.def
+[INFO   ] verilog_input = train_and_test_sample_metadata/train_and_test_sample_metadata/netlists/nangate45/gcd/1_synth.v
+[INFO   ] bookshelf_aux_input = 
+[INFO   ] bookshelf_pl_input = 
+[INFO   ] def_size_input = 
+[INFO   ] def_output = 3_2_place_iop-out.def
+[INFO   ] rpt_output = 
+[INFO   ] target_util = 0
+[INFO   ] max_displace = 0
+[INFO   ] bin size = (10, 10) #rows
+[INFO   ] sbin size = (5, 5) #rows
+[INFO   ] bin_space_threshold = 0.2
+[INFO   ] abu = 2,10 5,5 10,2 20,1 
+[INFO   ] def_ignore_cells = 
+[INFO   ] macro_obs_aware_layers = 
+[INFO   ] enable_place = true
+[INFO   ] enable_legalize = true
+[INFO   ] evaluate_overlap = false
+[INFO   ] move_multi_row_cell = true
+[INFO   ] align_power_line = true
+[INFO   ] cluster_cell = false
+[INFO   ] sort_nets_by_degree = false
+[INFO   ] file_format = DEF
+[INFO   ] max_iters = 6
+[INFO   ] reading train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.tech.lef
+[INFO   ] reading train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.lef
+[INFO   ] reading train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+[WARNING] duplicate macro found in LEF file: AND2_X1
+[WARNING] duplicate macro found in LEF file: AND2_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AND2_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AND3_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AND3_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A3, 6)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AND3_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A3, 6)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AND4_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A3, 6)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AND4_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A3, 6)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A4, 7)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AND4_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A3, 6)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A4, 7)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: ANTENNA_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro found in LEF file: AOI211_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI211_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C1, 8)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C2, 9)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI211_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C1, 8)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C2, 9)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI21_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI21_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI21_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI221_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C1, 8)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C2, 9)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI221_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C1, 8)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C2, 9)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI221_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C1, 8)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C2, 9)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI222_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C1, 8)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C2, 9)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI222_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C1, 8)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C2, 9)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI222_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C1, 8)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(C2, 9)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI22_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI22_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: AOI22_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A1, 3)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A2, 4)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B1, 10)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B2, 11)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(ZN, 5)
+[WARNING] duplicate macro found in LEF file: BUF_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: BUF_X16
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: BUF_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: BUF_X32
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: BUF_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: BUF_X8
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: CLKBUF_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: CLKBUF_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: CLKBUF_X3
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Z, 2)
+[WARNING] duplicate macro found in LEF file: CLKGATETST_X1
+[WARNING] duplicate macro found in LEF file: CLKGATETST_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(E, 13)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(SE, 14)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(GCK, 15)
+[WARNING] duplicate macro found in LEF file: CLKGATETST_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(E, 13)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(SE, 14)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(GCK, 15)
+[WARNING] duplicate macro found in LEF file: CLKGATETST_X8
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(E, 13)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(SE, 14)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(GCK, 15)
+[WARNING] duplicate macro found in LEF file: CLKGATE_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(E, 13)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(GCK, 15)
+[WARNING] duplicate macro found in LEF file: CLKGATE_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(E, 13)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(GCK, 15)
+[WARNING] duplicate macro found in LEF file: CLKGATE_X4
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(E, 13)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(GCK, 15)
+[WARNING] duplicate macro found in LEF file: CLKGATE_X8
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(E, 13)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(GCK, 15)
+[WARNING] duplicate macro found in LEF file: DFFRS_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro found in LEF file: DFFRS_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(RN, 17)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(SN, 18)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(QN, 20)
+[WARNING] duplicate macro found in LEF file: DFFR_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(RN, 17)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(QN, 20)
+[WARNING] duplicate macro found in LEF file: DFFR_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(RN, 17)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(QN, 20)
+[WARNING] duplicate macro found in LEF file: DFFS_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(SN, 18)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(QN, 20)
+[WARNING] duplicate macro found in LEF file: DFFS_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(SN, 18)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(QN, 20)
+[WARNING] duplicate macro found in LEF file: DFF_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(QN, 20)
+[WARNING] duplicate macro found in LEF file: DFF_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(CK, 12)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(QN, 20)
+[WARNING] duplicate macro found in LEF file: DLH_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro found in LEF file: DLH_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(G, 21)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro found in LEF file: DLL_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro found in LEF file: DLL_X2
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(D, 16)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(GN, 22)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(Q, 19)
+[WARNING] duplicate macro found in LEF file: FA_X1
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: XOR2_X2.(B, 1)
+[WARNING] duplicate macro found in LEF file: FILLCELL_X1
+[WARNING] duplicate macro found in LEF file: FILLCELL_X16
+[WARNING] duplicate macro found in LEF file: FILLCELL_X2
+[WARNING] duplicate macro found in LEF file: FILLCELL_X32
+[WARNING] duplicate macro found in LEF file: FILLCELL_X4
+[WARNING] duplicate macro found in LEF file: FILLCELL_X8
+[WARNING] duplicate macro found in LEF file: HA_X1
+[WARNING] duplicate macro found in LEF file: INV_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro found in LEF file: INV_X16
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X32
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X8
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: LOGIC0_X1
+[WARNING] duplicate macro found in LEF file: LOGIC1_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: MUX2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(S, 3)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: MUX2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(S, 3)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: NAND2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND2_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND3_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND3_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND3_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND4_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND4_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND4_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR2_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR3_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR3_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR3_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR4_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR4_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR4_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI211_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI211_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI211_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI21_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI21_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI21_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI221_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI221_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI221_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI222_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI222_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI222_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI22_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI22_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI22_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI33_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR2_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR3_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR3_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR3_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR4_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR4_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR4_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: SDFFRS_X1
+[WARNING] duplicate macro found in LEF file: SDFFRS_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFR_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFR_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFS_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFS_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFF_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFF_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: TBUF_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TBUF_X16
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TBUF_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TBUF_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TBUF_X8
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TINV_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: TLAT_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro found in LEF file: XNOR2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: XNOR2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: XOR2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: XOR2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[INFO   ] reading train_and_test_sample_metadata/train_and_test_sample_metadata/lef/nangate45/lef/NangateOpenCellLibrary.macro.rect.lef
+[WARNING] duplicate macro found in LEF file: AND2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AND2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AND2_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AND3_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AND3_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AND3_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AND4_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AND4_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AND4_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: ANTENNA_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro found in LEF file: AOI211_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI211_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI211_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI21_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI21_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI21_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI221_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI221_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI221_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI222_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI222_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI222_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI22_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI22_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: AOI22_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: BUF_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: BUF_X16
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: BUF_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: BUF_X32
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: BUF_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: BUF_X8
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: CLKBUF_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: CLKBUF_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: CLKBUF_X3
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: CLKGATETST_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro found in LEF file: CLKGATETST_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(E, 27)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(GCK, 28)
+[WARNING] duplicate macro found in LEF file: CLKGATETST_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(E, 27)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(GCK, 28)
+[WARNING] duplicate macro found in LEF file: CLKGATETST_X8
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(E, 27)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(GCK, 28)
+[WARNING] duplicate macro found in LEF file: CLKGATE_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(E, 27)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(GCK, 28)
+[WARNING] duplicate macro found in LEF file: CLKGATE_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(E, 27)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(GCK, 28)
+[WARNING] duplicate macro found in LEF file: CLKGATE_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(E, 27)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(GCK, 28)
+[WARNING] duplicate macro found in LEF file: CLKGATE_X8
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(E, 27)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(GCK, 28)
+[WARNING] duplicate macro found in LEF file: DFFRS_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: DFFRS_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: DFFR_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: DFFR_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: DFFS_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: DFFS_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: DFF_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: DFF_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: DLH_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(G, 25)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro found in LEF file: DLH_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(G, 25)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro found in LEF file: DLL_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro found in LEF file: DLL_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(GN, 29)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro found in LEF file: FA_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CO, 2)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(S, 3)
+[WARNING] duplicate macro found in LEF file: FILLCELL_X1
+[WARNING] duplicate macro found in LEF file: FILLCELL_X16
+[WARNING] duplicate macro found in LEF file: FILLCELL_X2
+[WARNING] duplicate macro found in LEF file: FILLCELL_X32
+[WARNING] duplicate macro found in LEF file: FILLCELL_X4
+[WARNING] duplicate macro found in LEF file: FILLCELL_X8
+[WARNING] duplicate macro found in LEF file: HA_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CO, 2)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(S, 3)
+[WARNING] duplicate macro found in LEF file: INV_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X16
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X32
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: INV_X8
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: LOGIC0_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: LOGIC1_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: MUX2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(S, 3)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: MUX2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(S, 3)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: NAND2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND2_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND3_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND3_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND3_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND4_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND4_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NAND4_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR2_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR3_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR3_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR3_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR4_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR4_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: NOR4_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI211_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI211_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI211_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI21_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI21_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI21_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI221_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI221_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI221_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI222_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI222_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI222_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C1, 10)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(C2, 11)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI22_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI22_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI22_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OAI33_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B1, 12)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B2, 13)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B3, 14)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR2_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR3_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR3_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR3_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR4_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR4_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: OR4_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A1, 6)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A2, 7)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A3, 8)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A4, 9)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: SDFFRS_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFRS_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFR_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFR_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(RN, 16)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFS_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFFS_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SN, 19)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFF_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: SDFF_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SE, 17)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(SI, 18)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(CK, 20)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(QN, 22)
+[WARNING] duplicate macro found in LEF file: TBUF_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TBUF_X16
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TBUF_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TBUF_X4
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TBUF_X8
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: TINV_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(EN, 23)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(I, 24)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: TLAT_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(D, 15)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(G, 25)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(OE, 26)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Q, 21)
+[WARNING] duplicate macro found in LEF file: XNOR2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: XNOR2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(ZN, 4)
+[WARNING] duplicate macro found in LEF file: XOR2_X1
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[WARNING] duplicate macro found in LEF file: XOR2_X2
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(A, 0)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(B, 1)
+[WARNING] duplicate macro pin found in LEF file: TAPCELL_X1.(Z, 5)
+[INFO   ] reading train_and_test_sample_metadata/train_and_test_sample_metadata/def/nangate45/gcd/3_2_place_iop.def
+[INFO   ] detect 24 rows, 551 components, 54 IO pins, 574 nets, 0 blockages
+[INFO   ] set CORE site to FreePDK45_38x28_10R_NP_162NW_34O, 380 x 2800, id = 0
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Track definition in DEF ignored
+[WARNING] Via definition in DEF ignored
+- via1_2_960_340_1_3_300_300  ;
++ VIARULE 'Via1Array-0'
+  + CUTSIZE 140 140
+  + LAYERS metal1 via1 metal2
+  + CUTSPACING 160 160
+  + ENCLOSURE 70 100 70 70
+  + ROWCOL 1 3
+END VIAS
+[WARNING] Via definition in DEF ignored
+- via2_3_960_340_1_3_320_320  ;
++ VIARULE 'Via2Array-0'
+  + CUTSIZE 140 140
+  + LAYERS metal2 via2 metal3
+  + CUTSPACING 180 180
+  + ENCLOSURE 70 70 70 70
+  + ROWCOL 1 3
+END VIAS
+[WARNING] Via definition in DEF ignored
+- via3_4_960_340_1_3_320_320  ;
++ VIARULE 'Via3Array-0'
+  + CUTSIZE 140 140
+  + LAYERS metal3 via3 metal4
+  + CUTSPACING 180 180
+  + ENCLOSURE 70 70 90 70
+  + ROWCOL 1 3
+END VIAS
+[WARNING] SPECIALNET definition in DEF ignored
+( * VDD ) 
+  + ROUTED metal4 960 + SHAPE STRIPE 
+( 62280 5430 ) ( 62280 67370 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 67200 ) ( 70680 67200 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 61600 ) ( 70680 61600 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 56000 ) ( 70680 56000 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 50400 ) ( 70680 50400 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 44800 ) ( 70680 44800 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 39200 ) ( 70680 39200 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 33600 ) ( 70680 33600 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 28000 ) ( 70680 28000 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 22400 ) ( 70680 22400 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 16800 ) ( 70680 16800 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 11200 ) ( 70680 11200 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 5600 ) ( 70680 5600 ) NEW metal3 0 + SHAPE STRIPE 
+( 62280 67200 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 67200 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 67200 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 61600 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 61600 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 61600 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 56000 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 56000 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 56000 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 50400 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 50400 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 50400 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 44800 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 44800 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 44800 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 39200 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 39200 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 39200 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 33600 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 33600 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 33600 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 28000 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 28000 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 28000 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 22400 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 22400 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 22400 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 16800 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 16800 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 16800 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 11200 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 11200 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 11200 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 62280 5600 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 62280 5600 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 62280 5600 ) via1_2_960_340_1_3_300_300 
+
+  + USE POWER ;
+END SPECIALNETS
+[WARNING] SPECIALNET definition in DEF ignored
+( * VSS ) 
+  + ROUTED metal4 960 + SHAPE STRIPE 
+( 6280 2630 ) ( 6280 70170 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 70000 ) ( 70680 70000 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 64400 ) ( 70680 64400 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 58800 ) ( 70680 58800 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 53200 ) ( 70680 53200 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 47600 ) ( 70680 47600 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 42000 ) ( 70680 42000 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 36400 ) ( 70680 36400 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 30800 ) ( 70680 30800 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 25200 ) ( 70680 25200 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 19600 ) ( 70680 19600 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 14000 ) ( 70680 14000 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 8400 ) ( 70680 8400 ) NEW metal1 340 + SHAPE FOLLOWPIN 
+( 2280 2800 ) ( 70680 2800 ) NEW metal3 0 + SHAPE STRIPE 
+( 6280 70000 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 70000 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 70000 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 64400 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 64400 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 64400 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 58800 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 58800 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 58800 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 53200 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 53200 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 53200 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 47600 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 47600 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 47600 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 42000 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 42000 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 42000 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 36400 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 36400 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 36400 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 30800 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 30800 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 30800 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 25200 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 25200 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 25200 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 19600 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 19600 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 19600 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 14000 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 14000 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 14000 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 8400 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 8400 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 8400 ) via1_2_960_340_1_3_300_300 NEW metal3 0 + SHAPE STRIPE 
+( 6280 2800 ) via3_4_960_340_1_3_320_320 NEW metal2 0 + SHAPE STRIPE 
+( 6280 2800 ) via2_3_960_340_1_3_320_320 NEW metal1 0 + SHAPE STRIPE 
+( 6280 2800 ) via1_2_960_340_1_3_300_300 
+
+  + USE GROUND ;
+END SPECIALNETS
+[WARNING] no Bookshelf file specified
+[WARNING] no additional Bookshelf .pl file specified
+[WARNING] 0 nets with 0 pins from same nodes
+[WARNING] 34 nets should be ignored due to not enough pins
+[INFO   ] sort nodes in the order of movable and fixed
+[INFO   ] Group cells for fence regions
+[INFO   ] Construct 0 groups
+[INFO   ] Fence region gro[INFO   ] DREAMPlace - set shift_factor = (0, 0), as original row bbox = (0, 0, 16200, 16200)
+[INFO   ] DREAMPlace - set scale_factor = 0.00263158, as site_width = 380
+[INFO   ] DREAMPlace - shift coordinate system by (0, 0), scale coordinate system by 0.00263158
+[WARNING] DREAMPlace - target_density 0.2 is smaller than cell utilization 0.65954, ignored
+[INFO   ] DREAMPlace - 
+================================= Benchmark Statistics =================================
+#nodes = 4733, #terminals = 4176, # terminal_NIs = 54, #movable = 503, #nets = 574
+die area = (0, 0, 42.6316, 42.6316) 1817.45
+row height = 7.36842, site width = 1
+#pins = 1626, #movable_pins = 1572
+total_movable_node_area = 18008.4, total_fixed_node_area = 850.475, total_space_area = 27304.5
+total_movable_cell_area = 18008.4, total_movable_macro_area = 0
+utilization = 0.65954, cell utilization = 0.65954, target_density = 0.65954
+use placeable_area = 27304.5 to compute fillers
+total_filler_node_area = 0, #fillers = 0, filler sizes = 4.31637x7.36842
+num_bins = 512x512, bin sizes = 0.0113002x0.0113002
+========================================================================================
+[INFO   ] DREAMPlace - reading benchmark takes 0.0873373 seconds
+[INFO   ] DREAMPlace - reading database takes 0.09 seconds
+[INFO   ] DREAMPlace - move cells to the center of layout with random noise
+[INFO   ] DREAMPlace - non-linear placement initialization takes 0.01 seconds
+[INFO   ] DREAMPlace - Global placement: 512x512 bins by default
+[INFO   ] DREAMPlace - 512x512 bins #bins 512x512, bin sizes 0.0113002x0.0113002, max_num_bins = 219, padding = 0
+[INFO   ] dreamplace.ops.electric_potential.electric_potential - regard 0 cells as movable macros in global placement
+[WARNING] DREAMPlace - quadratic density penalty is disabled, density weight update is forced to be based on HPWL
+[INFO   ] DREAMPlace - use nesterov optimizer
+[INFO   ] DREAMPlace - add 2.5% noise
+[INFO   ] dreamplace.ops.electric_potential.electric_potential - fixed density map: average 0.00213973, max 0.00457261, bin area 0.00693303
+[INFO   ] DREAMPlace - nesterov initialization takes 0.208942 seconds
+[INFO   ] DREAMPlace - density_weight = 6.489182E-10
+[INFO   ] DREAMPlace - optimizer step 81.180 ms
+[INFO   ] DREAMPlace - iteration    0, (   0,  0,  0), Obj 9.231460E+03, DensityWeight 0.000000E+00, wHPWL 9.502963E+03, Overflow 9.975572E-01, MaxDensity 5.037E+02, gamma 6.661184E+00, time 5.055ms
+[INFO   ] DREAMPlace - full step 110.347 ms
+[INFO   ] DREAMPlace - optimizer step 57.441 ms
+[INFO   ] DREAMPlace - iteration    1, (   1,  0,  0), Obj 8.810066E+03, DensityWeight 6.489182E-10, wHPWL 9.334904E+03, Overflow 9.972110E-01, MaxDensity 4.432E+02, gamma 6.578440E+00, time 8.726ms
+[INFO   ] DREAMPlace - full step 66.669 ms
+[INFO   ] DREAMPlace - optimizer step 52.459 ms
+[INFO   ] DREAMPlace - iteration    2, (   2,  0,  0), Obj 8.646887E+03, DensityWeight 6.812279E-10, wHPWL 9.297664E+03, Overflow 9.973859E-01, MaxDensity 3.908E+02, gamma 6.566798E+00, time 3.278ms
+[INFO   ] DREAMPlace - full step 56.209 ms
+[INFO   ] DREAMPlace - optimizer step 27.440 ms
+[INFO   ] DREAMPlace - iteration    3, (   3,  0,  0), Obj 8.572007E+03, DensityWeight 7.150747E-10, wHPWL 9.301306E+03, Overflow 9.970880E-01, MaxDensity 3.660E+02, gamma 6.572675E+00, time 3.360ms
+[INFO   ] DREAMPlace - full step 31.342 ms
+[INFO   ] DREAMPlace - optimizer step 54.520 ms
+[INFO   ] DREAMPlace - iteration    4, (   4,  0,  0), Obj 8.522855E+03, DensityWeight 7.508280E-10, wHPWL 9.345514E+03, Overflow 9.965619E-01, MaxDensity 3.359E+02, gamma 6.562666E+00, time 6.047ms
+[INFO   ] DREAMPlace - full step 61.034 ms
+[INFO   ] DREAMPlace - optimizer step 24.157 ms
+[INFO   ] DREAMPlace - iteration    5, (   5,  0,  0), Obj 8.487713E+03, DensityWeight 7.883645E-10, wHPWL 9.347345E+03, Overflow 9.958971E-01, MaxDensity 3.103E+02, gamma 6.545023E+00, time 3.534ms
+[INFO   ] DREAMPlace - full step 28.120 ms
+[INFO   ] DREAMPlace - optimizer step 22.834 ms
+[INFO   ] DREAMPlace - iteration    6, (   6,  0,  0), Obj 8.467154E+03, DensityWeight 8.277825E-10, wHPWL 9.375627E+03, Overflow 9.952109E-01, MaxDensity 2.999E+02, gamma 6.522797E+00, time 3.025ms
+[INFO   ] DREAMPlace - full step 26.295 ms
+[INFO   ] DREAMPlace - optimizer step 45.467 ms
+[INFO   ] DREAMPlace - iteration    7, (   7,  0,  0), Obj 8.453155E+03, DensityWeight 8.691681E-10, wHPWL 9.379600E+03, Overflow 9.944124E-01, MaxDensity 2.908E+02, gamma 6.499934E+00, time 3.189ms
+[INFO   ] DREAMPlace - full step 49.106 ms
+[INFO   ] DREAMPlace - optimizer step 32.195 ms
+[INFO   ] DREAMPlace - iteration    8, (   8,  0,  0), Obj 8.447403E+03, DensityWeight 9.126260E-10, wHPWL 9.387191E+03, Overflow 9.935230E-01, MaxDensity 2.875E+02, gamma 6.473429E+00, time 3.285ms
+[INFO   ] DREAMPlace - full step 35.928 ms
+[INFO   ] DREAMPlace - optimizer step 45.529 ms
+[INFO   ] DREAMPlace - iteration    9, (   9,  0,  0), Obj 8.448364E+03, DensityWeight 9.582563E-10, wHPWL 9.386848E+03, Overflow 9.926901E-01, MaxDensity 2.797E+02, gamma 6.444038E+00, time 3.121ms
+[INFO   ] DREAMPlace - full step 49.076 ms
+[INFO   ] DREAMPlace - optimizer step 25.200 ms
+[INFO   ] DREAMPlace - iteration   10, (  10,  0,  0), Obj 8.457818E+03, DensityWeight 1.005163E-09, wHPWL 9.393181E+03, Overflow 9.920245E-01, MaxDensity 2.655E+02, gamma 6.416632E+00, time 3.672ms
+[INFO   ] DREAMPlace - full step 29.333 ms
+[INFO   ] DREAMPlace - optimizer step 50.219 ms
+[INFO   ] DREAMPlace - iteration   11, (  11,  0,  0), Obj 8.473499E+03, DensityWeight 1.055420E-09, wHPWL 9.395872E+03, Overflow 9.915577E-01, MaxDensity 2.475E+02, gamma 6.394817E+00, time 8.501ms
+[INFO   ] DREAMPlace - full step 59.175 ms
+[INFO   ] DREAMPlace - optimizer step 29.346 ms
+[INFO   ] DREAMPlace - iteration   12, (  12,  0,  0), Obj 8.496375E+03, DensityWeight 1.108191E-09, wHPWL 9.392271E+03, Overflow 9.911547E-01, MaxDensity 2.424E+02, gamma 6.379557E+00, time 3.138ms
+[INFO   ] DREAMPlace - full step 32.936 ms
+[INFO   ] DREAMPlace - optimizer step 60.027 ms
+[INFO   ] DREAMPlace - iteration   13, (  13,  0,  0), Obj 8.527495E+03, DensityWeight 1.162089E-09, wHPWL 9.391172E+03, Overflow 9.907715E-01, MaxDensity 2.295E+02, gamma 6.366418E+00, time 9.980ms
+[INFO   ] DREAMPlace - full step 73.618 ms
+[INFO   ] DREAMPlace - optimizer step 32.527 ms
+[INFO   ] DREAMPlace - iteration   14, (  14,  0,  0), Obj 8.566971E+03, DensityWeight 1.218486E-09, wHPWL 9.389201E+03, Overflow 9.903446E-01, MaxDensity 2.226E+02, gamma 6.353948E+00, time 5.190ms
+[INFO   ] DREAMPlace - full step 38.229 ms
+[INFO   ] DREAMPlace - optimizer step 49.808 ms
+[INFO   ] DREAMPlace - iteration   15, (  15,  0,  0), Obj 8.616963E+03, DensityWeight 1.277493E-09, wHPWL 9.389939E+03, Overflow 9.900184E-01, MaxDensity 2.066E+02, gamma 6.340082E+00, time 3.862ms
+[INFO   ] DREAMPlace - full step 55.665 ms
+[INFO   ] DREAMPlace - optimizer step 23.007 ms
+[INFO   ] DREAMPlace - iteration   16, (  16,  0,  0), Obj 8.677716E+03, DensityWeight 1.341367E-09, wHPWL 9.386744E+03, Overflow 9.897290E-01, MaxDensity 1.974E+02, gamma 6.329509E+00, time 2.992ms
+[INFO   ] DREAMPlace - full step 26.373 ms
+[INFO   ] DREAMPlace - optimizer step 23.580 ms
+[INFO   ] DREAMPlace - iteration   17, (  17,  0,  0), Obj 8.753271E+03, DensityWeight 1.406043E-09, wHPWL 9.381650E+03, Overflow 9.894283E-01, MaxDensity 1.865E+02, gamma 6.320142E+00, time 2.608ms
+[INFO   ] DREAMPlace - full step 26.567 ms
+[INFO   ] DREAMPlace - optimizer step 25.265 ms
+[INFO   ] DREAMPlace - iteration   18, (  18,  0,  0), Obj 8.845255E+03, DensityWeight 1.473690E-09, wHPWL 9.391371E+03, Overflow 9.891877E-01, MaxDensity 1.761E+02, gamma 6.310429E+00, time 2.590ms
+[INFO   ] DREAMPlace - full step 28.225 ms
+[INFO   ] DREAMPlace - optimizer step 24.880 ms
+[INFO   ] DREAMPlace - iteration   19, (  19,  0,  0), Obj 8.949279E+03, DensityWeight 1.547372E-09, wHPWL 9.377029E+03, Overflow 9.890319E-01, MaxDensity 1.745E+02, gamma 6.302661E+00, time 2.543ms
+[INFO   ] DREAMPlace - full step 27.786 ms
+[INFO   ] DREAMPlace - optimizer step 23.943 ms
+[INFO   ] DREAMPlace - iteration   20, (  20,  0,  0), Obj 9.074965E+03, DensityWeight 1.621494E-09, wHPWL 9.364973E+03, Overflow 9.889489E-01, MaxDensity 1.674E+02, gamma 6.297638E+00, time 2.657ms
+[INFO   ] DREAMPlace - full step 26.957 ms
+[INFO   ] DREAMPlace - optimizer step 25.277 ms
+[INFO   ] DREAMPlace - iteration   21, (  21,  0,  0), Obj 9.216636E+03, DensityWeight 1.698997E-09, wHPWL 9.335812E+03, Overflow 9.889062E-01, MaxDensity 1.665E+02, gamma 6.294964E+00, time 2.631ms
+[INFO   ] DREAMPlace - full step 28.276 ms
+[INFO   ] DREAMPlace - optimizer step 23.565 ms
+[INFO   ] DREAMPlace - iteration   22, (  22,  0,  0), Obj 9.385538E+03, DensityWeight 1.780026E-09, wHPWL 9.324746E+03, Overflow 9.888743E-01, MaxDensity 1.621E+02, gamma 6.293591E+00, time 2.647ms
+[INFO   ] DREAMPlace - full step 26.596 ms
+[INFO   ] DREAMPlace - optimizer step 23.729 ms
+[INFO   ] DREAMPlace - iteration   23, (  23,  0,  0), Obj 9.579519E+03, DensityWeight 1.864734E-09, wHPWL 9.301032E+03, Overflow 9.888478E-01, MaxDensity 1.622E+02, gamma 6.292562E+00, time 2.568ms
+[INFO   ] DREAMPlace - full step 26.687 ms
+[INFO   ] DREAMPlace - optimizer step 22.377 ms
+[INFO   ] DREAMPlace - iteration   24, (  24,  0,  0), Obj 9.803655E+03, DensityWeight 1.953277E-09, wHPWL 9.286795E+03, Overflow 9.889852E-01, MaxDensity 1.593E+02, gamma 6.291709E+00, time 2.531ms
+[INFO   ] DREAMPlace - full step 25.290 ms
+[INFO   ] DREAMPlace - optimizer step 24.614 ms
+[INFO   ] DREAMPlace - iteration   25, (  25,  0,  0), Obj 1.005645E+04, DensityWeight 2.045819E-09, wHPWL 9.250805E+03, Overflow 9.892892E-01, MaxDensity 1.628E+02, gamma 6.296134E+00, time 2.615ms
+[INFO   ] DREAMPlace - full step 27.612 ms
+[INFO   ] DREAMPlace - optimizer step 23.813 ms
+[INFO   ] DREAMPlace - iteration   26, (  26,  0,  0), Obj 1.034594E+04, DensityWeight 2.142532E-09, wHPWL 9.229617E+03, Overflow 9.895979E-01, MaxDensity 1.625E+02, gamma 6.305933E+00, time 2.517ms
+[INFO   ] DREAMPlace - full step 26.705 ms
+[INFO   ] DREAMPlace - optimizer step 22.103 ms
+[INFO   ] DREAMPlace - iteration   27, (  27,  0,  0), Obj 1.067270E+04, DensityWeight 2.243593E-09, wHPWL 9.192519E+03, Overflow 9.899986E-01, MaxDensity 1.665E+02, gamma 6.315904E+00, time 2.640ms
+[INFO   ] DREAMPlace - full step 25.130 ms
+[INFO   ] DREAMPlace - optimizer step 22.642 ms
+[INFO   ] DREAMPlace - iteration   28, (  28,  0,  0), Obj 1.104380E+04, DensityWeight 2.349185E-09, wHPWL 9.171854E+03, Overflow 9.903323E-01, MaxDensity 1.678E+02, gamma 6.328866E+00, time 2.490ms
+[INFO   ] DREAMPlace - full step 25.515 ms
+[INFO   ] DREAMPlace - optimizer step 24.465 ms
+[INFO   ] DREAMPlace - iteration   29, (  29,  0,  0), Obj 1.145672E+04, DensityWeight 2.459501E-09, wHPWL 9.128180E+03, Overflow 9.906873E-01, MaxDensity 1.731E+02, gamma 6.339685E+00, time 2.391ms
+[INFO   ] DREAMPlace - full step 27.224 ms
+[INFO   ] DREAMPlace - optimizer step 22.421 ms
+[INFO   ] DREAMPlace - iteration   30, (  30,  0,  0), Obj 1.191976E+04, DensityWeight 2.574740E-09, wHPWL 9.100478E+03, Overflow 9.910176E-01, MaxDensity 1.763E+02, gamma 6.351210E+00, time 2.521ms
+[INFO   ] DREAMPlace - full step 25.334 ms
+[INFO   ] DREAMPlace - optimizer step 22.843 ms
+[INFO   ] DREAMPlace - iteration   31, (  31,  0,  0), Obj 1.243180E+04, DensityWeight 2.695109E-09, wHPWL 9.053928E+03, Overflow 9.913217E-01, MaxDensity 1.859E+02, gamma 6.361955E+00, time 2.482ms
+[INFO   ] DREAMPlace - full step 25.700 ms
+[INFO   ] DREAMPlace - optimizer step 23.345 ms
+[INFO   ] DREAMPlace - iteration   32, (  32,  0,  0), Obj 1.299973E+04, DensityWeight 2.820822E-09, wHPWL 9.025061E+03, Overflow 9.915724E-01, MaxDensity 1.890E+02, gamma 6.371864E+00, time 2.444ms
+[INFO   ] DREAMPlace - full step 26.157 ms
+[INFO   ] DREAMPlace - optimizer step 21.863 ms
+[INFO   ] DREAMPlace - iteration   33, (  33,  0,  0), Obj 1.361810E+04, DensityWeight 2.952105E-09, wHPWL 8.977399E+03, Overflow 9.917801E-01, MaxDensity 1.996E+02, gamma 6.380041E+00, time 2.555ms
+[INFO   ] DREAMPlace - full step 24.790 ms
+[INFO   ] DREAMPlace - optimizer step 22.931 ms
+[INFO   ] DREAMPlace - iteration   34, (  34,  0,  0), Obj 1.428801E+04, DensityWeight 3.089188E-09, wHPWL 8.945061E+03, Overflow 9.920002E-01, MaxDensity 2.130E+02, gamma 6.386825E+00, time 2.477ms
+[INFO   ] DREAMPlace - full step 25.789 ms
+[INFO   ] DREAMPlace - optimizer step 24.063 ms
+[INFO   ] DREAMPlace - iteration   35, (  35,  0,  0), Obj 1.500367E+04, DensityWeight 3.232315E-09, wHPWL 8.898529E+03, Overflow 9.922261E-01, MaxDensity 2.281E+02, gamma 6.394019E+00, time 2.639ms
+[INFO   ] DREAMPlace - full step 27.097 ms
+[INFO   ] DREAMPlace - optimizer step 23.751 ms
+[INFO   ] DREAMPlace - iteration   36, (  36,  0,  0), Obj 1.576283E+04, DensityWeight 3.381734E-09, wHPWL 8.866190E+03, Overflow 9.923680E-01, MaxDensity 2.380E+02, gamma 6.401415E+00, time 2.516ms
+[INFO   ] DREAMPlace - full step 26.639 ms
+[INFO   ] DREAMPlace - optimizer step 22.891 ms
+[INFO   ] DREAMPlace - iteration   37, (  37,  0,  0), Obj 1.656101E+04, DensityWeight 3.537706E-09, wHPWL 8.829242E+03, Overflow 9.925289E-01, MaxDensity 2.527E+02, gamma 6.406068E+00, time 2.527ms
+[INFO   ] DREAMPlace - full step 25.789 ms
+[INFO   ] DREAMPlace - optimizer step 21.297 ms
+[INFO   ] DREAMPlace - iteration   38, (  38,  0,  0), Obj 1.739431E+04, DensityWeight 3.700502E-09, wHPWL 8.804750E+03, Overflow 9.926376E-01, MaxDensity 2.693E+02, gamma 6.411344E+00, time 2.345ms
+[INFO   ] DREAMPlace - full step 24.004 ms
+[INFO   ] DREAMPlace - optimizer step 22.385 ms
+[INFO   ] DREAMPlace - iteration   39, (  39,  0,  0), Obj 1.825290E+04, DensityWeight 3.870402E-09, wHPWL 8.772413E+03, Overflow 9.927549E-01, MaxDensity 2.810E+02, gamma 6.414909E+00, time 2.601ms
+[INFO   ] DREAMPlace - full step 25.337 ms
+[INFO   ] DREAMPlace - optimizer step 23.797 ms
+[INFO   ] DREAMPlace - iteration   40, (  40,  0,  0), Obj 1.912533E+04, DensityWeight 4.047698E-09, wHPWL 8.751865E+03, Overflow 9.928620E-01, MaxDensity 2.926E+02, gamma 6.418762E+00, time 2.549ms
+[INFO   ] DREAMPlace - full step 27.382 ms
+[INFO   ] DREAMPlace - optimizer step 23.020 ms
+[INFO   ] DREAMPlace - iteration   41, (  41,  0,  0), Obj 2.000501E+04, DensityWeight 4.232692E-09, wHPWL 8.724371E+03, Overflow 9.929529E-01, MaxDensity 3.010E+02, gamma 6.422282E+00, time 2.576ms
+[INFO   ] DREAMPlace - full step 25.995 ms
+[INFO   ] DREAMPlace - optimizer step 24.555 ms
+[INFO   ] DREAMPlace - iteration   42, (  42,  0,  0), Obj 2.088694E+04, DensityWeight 4.425699E-09, wHPWL 8.708781E+03, Overflow 9.930338E-01, MaxDensity 3.121E+02, gamma 6.425269E+00, time 2.401ms
+[INFO   ] DREAMPlace - full step 27.308 ms
+[INFO   ] DREAMPlace - optimizer step 23.516 ms
+[INFO   ] DREAMPlace - iteration   43, (  43,  0,  0), Obj 2.176530E+04, DensityWeight 4.627044E-09, wHPWL 8.689680E+03, Overflow 9.931276E-01, MaxDensity 3.218E+02, gamma 6.427927E+00, time 2.445ms
+[INFO   ] DREAMPlace - full step 26.342 ms
+[INFO   ] DREAMPlace - optimizer step 22.593 ms
+[INFO   ] DREAMPlace - iteration   44, (  44,  0,  0), Obj 2.263068E+04, DensityWeight 4.837065E-09, wHPWL 8.677348E+03, Overflow 9.932206E-01, MaxDensity 3.237E+02, gamma 6.431012E+00, time 2.414ms
+[INFO   ] DREAMPlace - full step 25.358 ms
+[INFO   ] DREAMPlace - optimizer step 23.074 ms
+[INFO   ] DREAMPlace - iteration   45, (  45,  0,  0), Obj 2.347893E+04, DensityWeight 5.056113E-09, wHPWL 8.664656E+03, Overflow 9.932962E-01, MaxDensity 3.263E+02, gamma 6.434075E+00, time 2.475ms
+[INFO   ] DREAMPlace - full step 25.900 ms
+[INFO   ] DREAMPlace - optimizer step 23.785 ms
+[INFO   ] DREAMPlace - iteration   46, (  46,  0,  0), Obj 2.430709E+04, DensityWeight 5.284552E-09, wHPWL 8.656892E+03, Overflow 9.933592E-01, MaxDensity 3.323E+02, gamma 6.436563E+00, time 2.542ms
+[INFO   ] DREAMPlace - full step 26.707 ms
+[INFO   ] DREAMPlace - optimizer step 22.714 ms
+[INFO   ] DREAMPlace - iteration   47, (  47,  0,  0), Obj 2.511307E+04, DensityWeight 5.522760E-09, wHPWL 8.650485E+03, Overflow 9.934039E-01, MaxDensity 3.348E+02, gamma 6.438639E+00, time 2.384ms
+[INFO   ] DREAMPlace - full step 25.440 ms
+[INFO   ] DREAMPlace - optimizer step 22.901 ms
+[INFO   ] DREAMPlace - iteration   48, (  48,  0,  0), Obj 2.589224E+04, DensityWeight 5.771129E-09, wHPWL 8.648403E+03, Overflow 9.934322E-01, MaxDensity 3.344E+02, gamma 6.440113E+00, time 2.444ms
+[INFO   ] DREAMPlace - full step 25.696 ms
+[INFO   ] DREAMPlace - optimizer step 24.062 ms
+[INFO   ] DREAMPlace - iteration   49, (  49,  0,  0), Obj 2.662970E+04, DensityWeight 6.030064E-09, wHPWL 8.648719E+03, Overflow 9.934325E-01, MaxDensity 3.330E+02, gamma 6.441047E+00, time 2.587ms
+[INFO   ] DREAMPlace - full step 27.085 ms
+[INFO   ] DREAMPlace - optimizer step 51.774 ms
+[INFO   ] DREAMPlace - iteration   50, (  50,  0,  0), Obj 2.731428E+04, DensityWeight 6.331566E-09, wHPWL 8.655218E+03, Overflow 9.933964E-01, MaxDensity 3.327E+02, gamma 6.441055E+00, time 3.185ms
+[INFO   ] DREAMPlace - full step 55.408 ms
+[INFO   ] DREAMPlace - optimizer step 22.832 ms
+[INFO   ] DREAMPlace - iteration   51, (  51,  0,  0), Obj 2.808249E+04, DensityWeight 6.648138E-09, wHPWL 8.660555E+03, Overflow 9.933510E-01, MaxDensity 3.297E+02, gamma 6.439866E+00, time 2.543ms
+[INFO   ] DREAMPlace - full step 25.765 ms
+[INFO   ] DREAMPlace - Stuck at early stage. Turn on quadratic penalty with double density factor to accelerate convergence
+[INFO   ] DREAMPlace - Stuck at very early stage. Turn on entropy injection with noise intensity = 74.68078613281253 to help convergence
+[INFO   ] DREAMPlace - optimizer step 23.280 ms
+[INFO   ] DREAMPlace - iteration   52, (  52,  0,  0), Obj 2.882478E+04, DensityWeight 6.980540E-09, wHPWL 3.070557E+04, Overflow 9.694342E-01, MaxDensity 1.460E+02, gamma 6.438368E+00, time 3.354ms
+[INFO   ] DREAMPlace - full step 27.000 ms
+[INFO   ] DREAMPlace - optimizer step 22.764 ms
+[INFO   ] DREAMPlace - iteration   53, (  53,  0,  0), Obj 2.899932E+06, DensityWeight 7.307077E-09, wHPWL 3.133747E+04, Overflow 9.742397E-01, MaxDensity 1.447E+02, gamma 5.696754E+00, time 2.959ms
+[INFO   ] DREAMPlace - full step 26.095 ms
+[INFO   ] DREAMPlace - optimizer step 72.347 ms
+[INFO   ] DREAMPlace - iteration   54, (  54,  0,  0), Obj 4.764246E+04, DensityWeight 7.671754E-09, wHPWL 2.369411E+04, Overflow 9.667646E-01, MaxDensity 6.238E+01, gamma 5.838569E+00, time 2.980ms
+[INFO   ] DREAMPlace - full step 75.732 ms
+[INFO   ] DREAMPlace - optimizer step 71.993 ms
+[INFO   ] DREAMPlace - iteration   55, (  55,  0,  0), Obj 6.059827E+04, DensityWeight 8.011157E-09, wHPWL 2.385978E+04, Overflow 9.646403E-01, MaxDensity 3.242E+01, gamma 5.619463E+00, time 3.269ms
+[INFO   ] DREAMPlace - full step 75.658 ms
+[INFO   ] DREAMPlace - optimizer step 74.913 ms
+[INFO   ] DREAMPlace - iteration   56, (  56,  0,  0), Obj 1.608520E+05, DensityWeight 8.411520E-09, wHPWL 1.946904E+04, Overflow 9.668521E-01, MaxDensity 3.742E+01, gamma 5.558712E+00, time 3.307ms
+[INFO   ] DREAMPlace - full step 78.606 ms
+[INFO   ] DREAMPlace - optimizer step 47.222 ms
+[INFO   ] DREAMPlace - iteration   57, (  57,  0,  0), Obj 3.724912E+05, DensityWeight 8.781894E-09, wHPWL 1.686571E+04, Overflow 9.684623E-01, MaxDensity 5.450E+01, gamma 5.621978E+00, time 3.519ms
+[INFO   ] DREAMPlace - full step 51.124 ms
+[INFO   ] DREAMPlace - optimizer step 45.041 ms
+[INFO   ] DREAMPlace - iteration   58, (  58,  0,  0), Obj 6.438664E+05, DensityWeight 9.167660E-09, wHPWL 1.459979E+04, Overflow 9.710772E-01, MaxDensity 5.961E+01, gamma 5.668496E+00, time 3.116ms
+[INFO   ] DREAMPlace - full step 48.545 ms
+[INFO   ] DREAMPlace - optimizer step 46.436 ms
+[INFO   ] DREAMPlace - iteration   59, (  59,  0,  0), Obj 6.858618E+05, DensityWeight 9.569413E-09, wHPWL 1.324026E+04, Overflow 9.699821E-01, MaxDensity 6.155E+01, gamma 5.744846E+00, time 3.079ms
+[INFO   ] DREAMPlace - full step 49.899 ms
+[INFO   ] DREAMPlace - optimizer step 45.270 ms
+[INFO   ] DREAMPlace - iteration   60, (  60,  0,  0), Obj 5.046203E+05, DensityWeight 9.987774E-09, wHPWL 1.252060E+04, Overflow 9.711937E-01, MaxDensity 5.182E+01, gamma 5.712749E+00, time 3.222ms
+[INFO   ] DREAMPlace - full step 48.867 ms
+[INFO   ] DREAMPlace - optimizer step 24.912 ms
+[INFO   ] DREAMPlace - iteration   61, (  61,  0,  0), Obj 3.796020E+05, DensityWeight 1.042338E-08, wHPWL 1.203837E+04, Overflow 9.715791E-01, MaxDensity 4.808E+01, gamma 5.748274E+00, time 3.164ms
+[INFO   ] DREAMPlace - full step 28.444 ms
+[INFO   ] DREAMPlace - optimizer step 49.683 ms
+[INFO   ] DREAMPlace - iteration   62, (  62,  0,  0), Obj 3.500939E+05, DensityWeight 1.087690E-08, wHPWL 1.175820E+04, Overflow 9.709554E-01, MaxDensity 4.887E+01, gamma 5.759621E+00, time 3.110ms
+[INFO   ] DREAMPlace - full step 53.174 ms
+[INFO   ] DREAMPlace - optimizer step 24.081 ms
+[INFO   ] DREAMPlace - iteration   63, (  63,  0,  0), Obj 3.291952E+05, DensityWeight 1.134902E-08, wHPWL 1.144710E+04, Overflow 9.712083E-01, MaxDensity 4.652E+01, gamma 5.741268E+00, time 3.253ms
+[INFO   ] DREAMPlace - full step 27.702 ms
+[INFO   ] DREAMPlace - optimizer step 22.356 ms
+[INFO   ] DREAMPlace - iteration   64, (  64,  0,  0), Obj 3.128306E+05, DensityWeight 1.184044E-08, wHPWL 1.124556E+04, Overflow 9.713792E-01, MaxDensity 4.200E+01, gamma 5.748704E+00, time 3.038ms
+[INFO   ] DREAMPlace - full step 25.783 ms
+[INFO   ] DREAMPlace - optimizer step 23.633 ms
+[INFO   ] DREAMPlace - iteration   65, (  65,  0,  0), Obj 3.196833E+05, DensityWeight 1.235191E-08, wHPWL 1.112876E+04, Overflow 9.722670E-01, MaxDensity 4.238E+01, gamma 5.753730E+00, time 3.401ms
+[INFO   ] DREAMPlace - full step 27.408 ms
+[INFO   ] DREAMPlace - optimizer step 22.001 ms
+[INFO   ] DREAMPlace - iteration   66, (  66,  0,  0), Obj 3.502859E+05, DensityWeight 1.288419E-08, wHPWL 1.097929E+04, Overflow 9.731777E-01, MaxDensity 4.386E+01, gamma 5.779930E+00, time 3.098ms
+[INFO   ] DREAMPlace - full step 25.466 ms
+[INFO   ] DREAMPlace - optimizer step 23.480 ms
+[INFO   ] DREAMPlace - iteration   67, (  67,  0,  0), Obj 4.023666E+05, DensityWeight 1.343806E-08, wHPWL 1.077100E+04, Overflow 9.739652E-01, MaxDensity 5.183E+01, gamma 5.806925E+00, time 2.741ms
+[INFO   ] DREAMPlace - full step 26.583 ms
+[INFO   ] DREAMPlace - optimizer step 24.151 ms
+[INFO   ] DREAMPlace - iteration   68, (  68,  0,  0), Obj 4.528282E+05, DensityWeight 1.401433E-08, wHPWL 1.069023E+04, Overflow 9.747506E-01, MaxDensity 5.435E+01, gamma 5.830373E+00, time 2.903ms
+[INFO   ] DREAMPlace - full step 27.413 ms
+[INFO   ] DREAMPlace - optimizer step 23.782 ms
+[INFO   ] DREAMPlace - iteration   69, (  69,  0,  0), Obj 4.895738E+05, DensityWeight 1.461386E-08, wHPWL 1.062429E+04, Overflow 9.734178E-01, MaxDensity 5.596E+01, gamma 5.853851E+00, time 2.831ms
+[INFO   ] DREAMPlace - full step 26.978 ms
+[INFO   ] DREAMPlace - optimizer step 23.062 ms
+[INFO   ] DREAMPlace - iteration   70, (  70,  0,  0), Obj 5.024783E+05, DensityWeight 1.523751E-08, wHPWL 1.059346E+04, Overflow 9.721713E-01, MaxDensity 5.304E+01, gamma 5.814064E+00, time 2.887ms
+[INFO   ] DREAMPlace - full step 26.309 ms
+[INFO   ] DREAMPlace - optimizer step 23.775 ms
+[INFO   ] DREAMPlace - iteration   71, (  71,  0,  0), Obj 5.043114E+05, DensityWeight 1.588618E-08, wHPWL 1.052945E+04, Overflow 9.706576E-01, MaxDensity 5.015E+01, gamma 5.777101E+00, time 2.936ms
+[INFO   ] DREAMPlace - full step 27.063 ms
+[INFO   ] DREAMPlace - optimizer step 24.103 ms
+[INFO   ] DREAMPlace - iteration   72, (  72,  0,  0), Obj 4.980251E+05, DensityWeight 1.656082E-08, wHPWL 1.048689E+04, Overflow 9.702129E-01, MaxDensity 4.587E+01, gamma 5.732526E+00, time 2.889ms
+[INFO   ] DREAMPlace - full step 27.354 ms
+[INFO   ] DREAMPlace - optimizer step 22.204 ms
+[INFO   ] DREAMPlace - iteration   73, (  73,  0,  0), Obj 4.902262E+05, DensityWeight 1.726238E-08, wHPWL 1.044223E+04, Overflow 9.705868E-01, MaxDensity 4.800E+01, gamma 5.719499E+00, time 2.826ms
+[INFO   ] DREAMPlace - full step 25.399 ms
+[INFO   ] DREAMPlace - optimizer step 26.632 ms
+[INFO   ] DREAMPlace - iteration   74, (  74,  0,  0), Obj 4.740641E+05, DensityWeight 1.799186E-08, wHPWL 1.041680E+04, Overflow 9.709229E-01, MaxDensity 4.796E+01, gamma 5.730450E+00, time 2.880ms
+[INFO   ] DREAMPlace - full step 29.867 ms
+[INFO   ] DREAMPlace - optimizer step 23.291 ms
+[INFO   ] DREAMPlace - iteration   75, (  75,  0,  0), Obj 4.537478E+05, DensityWeight 1.875029E-08, wHPWL 1.038377E+04, Overflow 9.709487E-01, MaxDensity 4.466E+01, gamma 5.740314E+00, time 3.036ms
+[INFO   ] DREAMPlace - full step 26.699 ms
+[INFO   ] DREAMPlace - optimizer step 24.812 ms
+[INFO   ] DREAMPlace - iteration   76, (  76,  0,  0), Obj 4.290616E+05, DensityWeight 1.953874E-08, wHPWL 1.035471E+04, Overflow 9.709585E-01, MaxDensity 4.019E+01, gamma 5.741071E+00, time 2.979ms
+[INFO   ] DREAMPlace - full step 28.154 ms
+[INFO   ] DREAMPlace - optimizer step 23.215 ms
+[INFO   ] DREAMPlace - iteration   77, (  77,  0,  0), Obj 4.050334E+05, DensityWeight 2.035830E-08, wHPWL 1.033414E+04, Overflow 9.703684E-01, MaxDensity 4.328E+01, gamma 5.741358E+00, time 2.844ms
+[INFO   ] DREAMPlace - full step 26.413 ms
+[INFO   ] DREAMPlace - optimizer step 27.018 ms
+[INFO   ] DREAMPlace - iteration   78, (  78,  0,  0), Obj 3.821168E+05, DensityWeight 2.121012E-08, wHPWL 1.031991E+04, Overflow 9.696872E-01, MaxDensity 4.529E+01, gamma 5.724051E+00, time 2.795ms
+[INFO   ] DREAMPlace - full step 30.288 ms
+[INFO   ] DREAMPlace - optimizer step 28.725 ms
+[INFO   ] DREAMPlace - iteration   79, (  79,  0,  0), Obj 3.627179E+05, DensityWeight 2.209538E-08, wHPWL 1.031504E+04, Overflow 9.690869E-01, MaxDensity 4.389E+01, gamma 5.704133E+00, time 6.384ms
+[INFO   ] DREAMPlace - full step 35.594 ms
+[INFO   ] DREAMPlace - optimizer step 27.840 ms
+[INFO   ] DREAMPlace - iteration   80, (  80,  0,  0), Obj 3.461438E+05, DensityWeight 2.301528E-08, wHPWL 1.030947E+04, Overflow 9.687970E-01, MaxDensity 4.666E+01, gamma 5.686641E+00, time 3.433ms
+[INFO   ] DREAMPlace - full step 31.708 ms
+[INFO   ] DREAMPlace - optimizer step 26.726 ms
+[INFO   ] DREAMPlace - iteration   81, (  81,  0,  0), Obj 3.348960E+05, DensityWeight 2.397108E-08, wHPWL 1.029653E+04, Overflow 9.687543E-01, MaxDensity 4.639E+01, gamma 5.678210E+00, time 3.243ms
+[INFO   ] DREAMPlace - full step 30.408 ms
+[INFO   ] DREAMPlace - optimizer step 27.942 ms
+[INFO   ] DREAMPlace - iteration   82, (  82,  0,  0), Obj 3.274904E+05, DensityWeight 2.496408E-08, wHPWL 1.029043E+04, Overflow 9.690634E-01, MaxDensity 4.504E+01, gamma 5.676970E+00, time 8.075ms
+[INFO   ] DREAMPlace - full step 39.838 ms
+[INFO   ] DREAMPlace - optimizer step 26.049 ms
+[INFO   ] DREAMPlace - iteration   83, (  83,  0,  0), Obj 3.250225E+05, DensityWeight 2.599561E-08, wHPWL 1.027531E+04, Overflow 9.695262E-01, MaxDensity 4.565E+01, gamma 5.685956E+00, time 7.150ms
+[INFO   ] DREAMPlace - full step 33.609 ms
+[INFO   ] DREAMPlace - optimizer step 26.214 ms
+[INFO   ] DREAMPlace - iteration   84, (  84,  0,  0), Obj 3.252895E+05, DensityWeight 2.706705E-08, wHPWL 1.027009E+04, Overflow 9.698063E-01, MaxDensity 4.266E+01, gamma 5.699433E+00, time 3.281ms
+[INFO   ] DREAMPlace - full step 29.886 ms
+[INFO   ] DREAMPlace - optimizer step 44.203 ms
+[INFO   ] DREAMPlace - iteration   85, (  85,  0,  0), Obj 3.283045E+05, DensityWeight 2.817985E-08, wHPWL 1.025785E+04, Overflow 9.700305E-01, MaxDensity 3.980E+01, gamma 5.707610E+00, time 3.491ms
+[INFO   ] DREAMPlace - full step 48.133 ms
+[INFO   ] DREAMPlace - optimizer step 36.287 ms
+[INFO   ] DREAMPlace - iteration   86, (  86,  0,  0), Obj 3.334226E+05, DensityWeight 2.933545E-08, wHPWL 1.025762E+04, Overflow 9.703014E-01, MaxDensity 3.831E+01, gamma 5.714162E+00, time 3.835ms
+[INFO   ] DREAMPlace - full step 40.559 ms
+[INFO   ] DREAMPlace - optimizer step 26.075 ms
+[INFO   ] DREAMPlace - iteration   87, (  87,  0,  0), Obj 3.401394E+05, DensityWeight 3.053539E-08, wHPWL 1.025452E+04, Overflow 9.707180E-01, MaxDensity 3.900E+01, gamma 5.722090E+00, time 5.625ms
+[INFO   ] DREAMPlace - full step 32.133 ms
+[INFO   ] DREAMPlace - optimizer step 25.797 ms
+[INFO   ] DREAMPlace - iteration   88, (  88,  0,  0), Obj 3.478949E+05, DensityWeight 3.178124E-08, wHPWL 1.025953E+04, Overflow 9.710696E-01, MaxDensity 3.828E+01, gamma 5.734299E+00, time 3.245ms
+[INFO   ] DREAMPlace - full step 29.485 ms
+[INFO   ] DREAMPlace - optimizer step 29.450 ms
+[INFO   ] DREAMPlace - iteration   89, (  89,  0,  0), Obj 3.552481E+05, DensityWeight 3.337028E-08, wHPWL 1.025772E+04, Overflow 9.713382E-01, MaxDensity 3.766E+01, gamma 5.744626E+00, time 4.786ms
+[INFO   ] DREAMPlace - full step 34.683 ms
+[INFO   ] DREAMPlace - optimizer step 25.791 ms
+[INFO   ] DREAMPlace - iteration   90, (  90,  0,  0), Obj 3.625860E+05, DensityWeight 3.472484E-08, wHPWL 1.026386E+04, Overflow 9.714030E-01, MaxDensity 3.660E+01, gamma 5.752522E+00, time 3.170ms
+[INFO   ] DREAMPlace - full step 29.407 ms
+[INFO   ] DREAMPlace - optimizer step 25.769 ms
+[INFO   ] DREAMPlace - iteration   91, (  91,  0,  0), Obj 3.618272E+05, DensityWeight 3.646105E-08, wHPWL 1.026653E+04, Overflow 9.714401E-01, MaxDensity 3.700E+01, gamma 5.754431E+00, time 3.487ms
+[INFO   ] DREAMPlace - full step 29.716 ms
+[INFO   ] DREAMPlace - optimizer step 24.837 ms
+[INFO   ] DREAMPlace - iteration   92, (  92,  0,  0), Obj 3.615122E+05, DensityWeight 3.828409E-08, wHPWL 1.027599E+04, Overflow 9.712982E-01, MaxDensity 3.884E+01, gamma 5.755526E+00, time 6.676ms
+[INFO   ] DREAMPlace - full step 32.207 ms
+[INFO   ] DREAMPlace - optimizer step 23.972 ms
+[INFO   ] DREAMPlace - iteration   93, (  93,  0,  0), Obj 3.582775E+05, DensityWeight 4.019824E-08, wHPWL 1.028184E+04, Overflow 9.709526E-01, MaxDensity 3.766E+01, gamma 5.751346E+00, time 3.329ms
+[INFO   ] DREAMPlace - full step 27.753 ms
+[INFO   ] DREAMPlace - optimizer step 24.894 ms
+[INFO   ] DREAMPlace - iteration   94, (  94,  0,  0), Obj 3.535256E+05, DensityWeight 4.220812E-08, wHPWL 1.029139E+04, Overflow 9.706696E-01, MaxDensity 3.658E+01, gamma 5.741186E+00, time 3.221ms
+[INFO   ] DREAMPlace - full step 28.572 ms
+[INFO   ] DREAMPlace - optimizer step 26.908 ms
+[INFO   ] DREAMPlace - iteration   95, (  95,  0,  0), Obj 3.488730E+05, DensityWeight 4.431846E-08, wHPWL 1.029767E+04, Overflow 9.703720E-01, MaxDensity 3.733E+01, gamma 5.732878E+00, time 3.435ms
+[INFO   ] DREAMPlace - full step 30.804 ms
+[INFO   ] DREAMPlace - optimizer step 29.576 ms
+[INFO   ] DREAMPlace - iteration   96, (  96,  0,  0), Obj 3.449567E+05, DensityWeight 4.653434E-08, wHPWL 1.030505E+04, Overflow 9.700252E-01, MaxDensity 3.471E+01, gamma 5.724153E+00, time 3.195ms
+[INFO   ] DREAMPlace - full step 33.236 ms
+[INFO   ] DREAMPlace - optimizer step 25.817 ms
+[INFO   ] DREAMPlace - iteration   97, (  97,  0,  0), Obj 3.423442E+05, DensityWeight 4.886100E-08, wHPWL 1.030985E+04, Overflow 9.697929E-01, MaxDensity 3.726E+01, gamma 5.714005E+00, time 3.264ms
+[INFO   ] DREAMPlace - full step 29.517 ms
+[INFO   ] DREAMPlace - optimizer step 24.477 ms
+[INFO   ] DREAMPlace - iteration   98, (  98,  0,  0), Obj 3.406453E+05, DensityWeight 5.130402E-08, wHPWL 1.031518E+04, Overflow 9.695860E-01, MaxDensity 3.781E+01, gamma 5.707218E+00, time 3.582ms
+[INFO   ] DREAMPlace - full step 28.533 ms
+[INFO   ] DREAMPlace - optimizer step 23.262 ms
+[INFO   ] DREAMPlace - iteration   99, (  99,  0,  0), Obj 3.399041E+05, DensityWeight 5.386918E-08, wHPWL 1.031877E+04, Overflow 9.694617E-01, MaxDensity 3.664E+01, gamma 5.701178E+00, time 3.097ms
+[INFO   ] DREAMPlace - full step 26.788 ms
+[INFO   ] DREAMPlace - optimizer step 22.858 ms
+[INFO   ] DREAMPlace - iteration  100, ( 100,  0,  0), Obj 3.390887E+05, DensityWeight 5.656261E-08, wHPWL 1.032184E+04, Overflow 9.693633E-01, MaxDensity 3.425E+01, gamma 5.697554E+00, time 3.088ms
+[INFO   ] DREAMPlace - full step 26.366 ms
+[INFO   ] DREAMPlace - optimizer step 25.146 ms
+[INFO   ] DREAMPlace - iteration  101, ( 101,  0,  0), Obj 3.382738E+05, DensityWeight 5.939071E-08, wHPWL 1.032598E+04, Overflow 9.693144E-01, MaxDensity 3.352E+01, gamma 5.694685E+00, time 3.146ms
+[INFO   ] DREAMPlace - full step 28.693 ms
+[INFO   ] DREAMPlace - optimizer step 23.768 ms
+[INFO   ] DREAMPlace - iteration  102, ( 102,  0,  0), Obj 3.366007E+05, DensityWeight 6.236021E-08, wHPWL 1.032663E+04, Overflow 9.692592E-01, MaxDensity 3.134E+01, gamma 5.693263E+00, time 3.070ms
+[INFO   ] DREAMPlace - full step 27.231 ms
+[INFO   ] DREAMPlace - optimizer step 23.452 ms
+[INFO   ] DREAMPlace - iteration  103, ( 103,  0,  0), Obj 3.345055E+05, DensityWeight 6.547820E-08, wHPWL 1.033253E+04, Overflow 9.691219E-01, MaxDensity 2.958E+01, gamma 5.691654E+00, time 5.363ms
+[INFO   ] DREAMPlace - full step 29.206 ms
+[INFO   ] DREAMPlace - optimizer step 23.974 ms
+[INFO   ] DREAMPlace - iteration  104, ( 104,  0,  0), Obj 3.316488E+05, DensityWeight 6.875206E-08, wHPWL 1.033265E+04, Overflow 9.689615E-01, MaxDensity 3.043E+01, gamma 5.687655E+00, time 3.090ms
+[INFO   ] DREAMPlace - full step 27.455 ms
+[INFO   ] DREAMPlace - optimizer step 24.375 ms
+[INFO   ] DREAMPlace - iteration  105, ( 105,  0,  0), Obj 3.287038E+05, DensityWeight 7.218966E-08, wHPWL 1.033950E+04, Overflow 9.688510E-01, MaxDensity 2.989E+01, gamma 5.682990E+00, time 3.055ms
+[INFO   ] DREAMPlace - full step 27.826 ms
+[INFO   ] DREAMPlace - optimizer step 25.178 ms
+[INFO   ] DREAMPlace - iteration  106, ( 106,  0,  0), Obj 3.255255E+05, DensityWeight 7.579906E-08, wHPWL 1.033819E+04, Overflow 9.687753E-01, MaxDensity 2.953E+01, gamma 5.679778E+00, time 3.076ms
+[INFO   ] DREAMPlace - full step 28.644 ms
+[INFO   ] DREAMPlace - optimizer step 29.660 ms
+[INFO   ] DREAMPlace - iteration  107, ( 107,  0,  0), Obj 3.226158E+05, DensityWeight 7.874191E-08, wHPWL 1.034492E+04, Overflow 9.687076E-01, MaxDensity 2.951E+01, gamma 5.677579E+00, time 3.081ms
+[INFO   ] DREAMPlace - full step 33.136 ms
+[INFO   ] DREAMPlace - optimizer step 25.881 ms
+[INFO   ] DREAMPlace - iteration  108, ( 108,  0,  0), Obj 3.163512E+05, DensityWeight 8.267893E-08, wHPWL 1.034312E+04, Overflow 9.685869E-01, MaxDensity 2.984E+01, gamma 5.675613E+00, time 3.019ms
+[INFO   ] DREAMPlace - full step 29.302 ms
+[INFO   ] DREAMPlace - optimizer step 23.905 ms
+[INFO   ] DREAMPlace - iteration  109, ( 109,  0,  0), Obj 3.159228E+05, DensityWeight 8.587170E-08, wHPWL 1.034842E+04, Overflow 9.683943E-01, MaxDensity 3.066E+01, gamma 5.672107E+00, time 3.290ms
+[INFO   ] DREAMPlace - full step 27.593 ms
+[INFO   ] DREAMPlace - optimizer step 25.675 ms
+[INFO   ] DREAMPlace - iteration  110, ( 110,  0,  0), Obj 3.111360E+05, DensityWeight 9.016522E-08, wHPWL 1.034606E+04, Overflow 9.681966E-01, MaxDensity 3.066E+01, gamma 5.666522E+00, time 3.808ms
+[INFO   ] DREAMPlace - full step 29.944 ms
+[INFO   ] DREAMPlace - optimizer step 23.324 ms
+[INFO   ] DREAMPlace - iteration  111, ( 111,  0,  0), Obj 3.117308E+05, DensityWeight 9.362837E-08, wHPWL 1.035234E+04, Overflow 9.680331E-01, MaxDensity 3.166E+01, gamma 5.660791E+00, time 3.077ms
+[INFO   ] DREAMPlace - full step 26.817 ms
+[INFO   ] DREAMPlace - optimizer step 24.624 ms
+[INFO   ] DREAMPlace - iteration  112, ( 112,  0,  0), Obj 3.076133E+05, DensityWeight 9.830969E-08, wHPWL 1.035125E+04, Overflow 9.678375E-01, MaxDensity 3.266E+01, gamma 5.656055E+00, time 3.205ms
+[INFO   ] DREAMPlace - full step 28.256 ms
+[INFO   ] DREAMPlace - optimizer step 25.321 ms
+[INFO   ] DREAMPlace - iteration  113, ( 113,  0,  0), Obj 3.086216E+05, DensityWeight 1.020652E-07, wHPWL 1.035854E+04, Overflow 9.676445E-01, MaxDensity 3.366E+01, gamma 5.650401E+00, time 4.221ms
+[INFO   ] DREAMPlace - full step 29.966 ms
+[INFO   ] DREAMPlace - optimizer step 24.926 ms
+[INFO   ] DREAMPlace - iteration  114, ( 114,  0,  0), Obj 3.046091E+05, DensityWeight 1.071684E-07, wHPWL 1.035837E+04, Overflow 9.674405E-01, MaxDensity 3.376E+01, gamma 5.644820E+00, time 3.303ms
+[INFO   ] DREAMPlace - full step 28.651 ms
+[INFO   ] DREAMPlace - optimizer step 23.900 ms
+[INFO   ] DREAMPlace - iteration  115, ( 115,  0,  0), Obj 3.057370E+05, DensityWeight 1.112401E-07, wHPWL 1.036636E+04, Overflow 9.673112E-01, MaxDensity 3.247E+01, gamma 5.638931E+00, time 3.043ms
+[INFO   ] DREAMPlace - full step 27.359 ms
+[INFO   ] DREAMPlace - optimizer step 23.396 ms
+[INFO   ] DREAMPlace - iteration  116, ( 116,  0,  0), Obj 3.019250E+05, DensityWeight 1.168020E-07, wHPWL 1.036699E+04, Overflow 9.671609E-01, MaxDensity 3.226E+01, gamma 5.635204E+00, time 3.174ms
+[INFO   ] DREAMPlace - full step 26.990 ms
+[INFO   ] DREAMPlace - optimizer step 24.867 ms
+[INFO   ] DREAMPlace - iteration  117, ( 117,  0,  0), Obj 3.031345E+05, DensityWeight 1.226420E-07, wHPWL 1.037554E+04, Overflow 9.670632E-01, MaxDensity 3.090E+01, gamma 5.630873E+00, time 3.116ms
+[INFO   ] DREAMPlace - full step 28.392 ms
+[INFO   ] DREAMPlace - optimizer step 24.903 ms
+[INFO   ] DREAMPlace - iteration  118, ( 118,  0,  0), Obj 3.026229E+05, DensityWeight 1.287740E-07, wHPWL 1.037631E+04, Overflow 9.669200E-01, MaxDensity 3.066E+01, gamma 5.628058E+00, time 3.043ms
+[INFO   ] DREAMPlace - full step 28.352 ms
+[INFO   ] DREAMPlace - optimizer step 24.386 ms
+[INFO   ] DREAMPlace - iteration  119, ( 119,  0,  0), Obj 3.010752E+05, DensityWeight 1.352127E-07, wHPWL 1.038631E+04, Overflow 9.667650E-01, MaxDensity 3.066E+01, gamma 5.623936E+00, time 3.116ms
+[INFO   ] DREAMPlace - full step 27.934 ms
+[INFO   ] DREAMPlace - optimizer step 23.793 ms
+[INFO   ] DREAMPlace - iteration  120, ( 120,  0,  0), Obj 2.986545E+05, DensityWeight 1.419731E-07, wHPWL 1.038825E+04, Overflow 9.666356E-01, MaxDensity 3.066E+01, gamma 5.619474E+00, time 3.070ms
+[INFO   ] DREAMPlace - full step 27.273 ms
+[INFO   ] DREAMPlace - optimizer step 24.212 ms
+[INFO   ] DREAMPlace - iteration  121, ( 121,  0,  0), Obj 2.962874E+05, DensityWeight 1.490717E-07, wHPWL 1.039858E+04, Overflow 9.664910E-01, MaxDensity 3.066E+01, gamma 5.615758E+00, time 3.130ms
+[INFO   ] DREAMPlace - full step 27.774 ms
+[INFO   ] DREAMPlace - optimizer step 29.546 ms
+[INFO   ] DREAMPlace - iteration  122, ( 122,  0,  0), Obj 2.939264E+05, DensityWeight 1.565251E-07, wHPWL 1.040036E+04, Overflow 9.663566E-01, MaxDensity 2.953E+01, gamma 5.611606E+00, time 5.453ms
+[INFO   ] DREAMPlace - full step 35.445 ms
+[INFO   ] DREAMPlace - optimizer step 23.503 ms
+[INFO   ] DREAMPlace - iteration  123, ( 123,  0,  0), Obj 2.920561E+05, DensityWeight 1.643513E-07, wHPWL 1.041011E+04, Overflow 9.662256E-01, MaxDensity 2.997E+01, gamma 5.607745E+00, time 3.331ms
+[INFO   ] DREAMPlace - full step 27.262 ms
+[INFO   ] DREAMPlace - optimizer step 25.352 ms
+[INFO   ] DREAMPlace - iteration  124, ( 124,  0,  0), Obj 2.901602E+05, DensityWeight 1.725686E-07, wHPWL 1.041189E+04, Overflow 9.661378E-01, MaxDensity 2.866E+01, gamma 5.603986E+00, time 3.189ms
+[INFO   ] DREAMPlace - full step 28.945 ms
+[INFO   ] DREAMPlace - optimizer step 25.255 ms
+[INFO   ] DREAMPlace - iteration  125, ( 125,  0,  0), Obj 2.883183E+05, DensityWeight 1.811970E-07, wHPWL 1.042086E+04, Overflow 9.660594E-01, MaxDensity 2.866E+01, gamma 5.601471E+00, time 3.229ms
+[INFO   ] DREAMPlace - full step 28.887 ms
+[INFO   ] DREAMPlace - optimizer step 24.696 ms
+[INFO   ] DREAMPlace - iteration  126, ( 126,  0,  0), Obj 2.862540E+05, DensityWeight 1.902566E-07, wHPWL 1.042271E+04, Overflow 9.660235E-01, MaxDensity 2.766E+01, gamma 5.599224E+00, time 3.189ms
+[INFO   ] DREAMPlace - full step 28.291 ms
+[INFO   ] DREAMPlace - optimizer step 24.773 ms
+[INFO   ] DREAMPlace - iteration  127, ( 127,  0,  0), Obj 2.842144E+05, DensityWeight 1.997693E-07, wHPWL 1.043107E+04, Overflow 9.659744E-01, MaxDensity 2.853E+01, gamma 5.598195E+00, time 3.218ms
+[INFO   ] DREAMPlace - full step 28.407 ms
+[INFO   ] DREAMPlace - optimizer step 23.119 ms
+[INFO   ] DREAMPlace - iteration  128, ( 128,  0,  0), Obj 2.820248E+05, DensityWeight 2.097576E-07, wHPWL 1.043320E+04, Overflow 9.659249E-01, MaxDensity 2.766E+01, gamma 5.596788E+00, time 3.244ms
+[INFO   ] DREAMPlace - full step 26.770 ms
+[INFO   ] DREAMPlace - optimizer step 25.723 ms
+[INFO   ] DREAMPlace - iteration  129, ( 129,  0,  0), Obj 2.799070E+05, DensityWeight 2.202454E-07, wHPWL 1.044127E+04, Overflow 9.658433E-01, MaxDensity 2.844E+01, gamma 5.595374E+00, time 3.331ms
+[INFO   ] DREAMPlace - full step 29.465 ms
+[INFO   ] DREAMPlace - optimizer step 27.353 ms
+[INFO   ] DREAMPlace - iteration  130, ( 130,  0,  0), Obj 2.777031E+05, DensityWeight 2.312573E-07, wHPWL 1.044355E+04, Overflow 9.657515E-01, MaxDensity 2.831E+01, gamma 5.593034E+00, time 7.148ms
+[INFO   ] DREAMPlace - full step 34.908 ms
+[INFO   ] DREAMPlace - optimizer step 24.837 ms
+[INFO   ] DREAMPlace - iteration  131, ( 131,  0,  0), Obj 2.756627E+05, DensityWeight 2.428201E-07, wHPWL 1.045115E+04, Overflow 9.657009E-01, MaxDensity 2.794E+01, gamma 5.590409E+00, time 3.209ms
+[INFO   ] DREAMPlace - full step 28.457 ms
+[INFO   ] DREAMPlace - optimizer step 24.156 ms
+[INFO   ] DREAMPlace - iteration  132, ( 132,  0,  0), Obj 2.739084E+05, DensityWeight 2.549608E-07, wHPWL 1.045349E+04, Overflow 9.656465E-01, MaxDensity 2.749E+01, gamma 5.588961E+00, time 3.170ms
+[INFO   ] DREAMPlace - full step 27.716 ms
+[INFO   ] DREAMPlace - optimizer step 26.863 ms
+[INFO   ] DREAMPlace - iteration  133, ( 133,  0,  0), Obj 2.719585E+05, DensityWeight 2.677088E-07, wHPWL 1.046042E+04, Overflow 9.656239E-01, MaxDensity 2.766E+01, gamma 5.587407E+00, time 3.131ms
+[INFO   ] DREAMPlace - full step 30.407 ms
+[INFO   ] DREAMPlace - optimizer step 25.319 ms
+[INFO   ] DREAMPlace - iteration  134, ( 134,  0,  0), Obj 2.697178E+05, DensityWeight 2.810939E-07, wHPWL 1.046309E+04, Overflow 9.655632E-01, MaxDensity 2.736E+01, gamma 5.586760E+00, time 3.116ms
+[INFO   ] DREAMPlace - full step 28.880 ms
+[INFO   ] DREAMPlace - optimizer step 24.508 ms
+[INFO   ] DREAMPlace - iteration  135, ( 135,  0,  0), Obj 2.675518E+05, DensityWeight 2.951485E-07, wHPWL 1.046936E+04, Overflow 9.655257E-01, MaxDensity 2.766E+01, gamma 5.585027E+00, time 3.186ms
+[INFO   ] DREAMPlace - full step 28.131 ms
+[INFO   ] DREAMPlace - Stuck at early stage. Turn on quadratic penalty with double density factor to accelerate convergence
+[INFO   ] DREAMPlace - Stuck at very early stage. Turn on entropy injection with noise intensity = 52.42054939270023 to help convergence
+[INFO   ] DREAMPlace - optimizer step 53.355 ms
+[INFO   ] DREAMPlace - iteration  136, ( 136,  0,  0), Obj 2.653396E+05, DensityWeight 3.099057E-07, wHPWL 3.046723E+04, Overflow 9.672154E-01, MaxDensity 8.900E+01, gamma 5.583952E+00, time 3.426ms
+[INFO   ] DREAMPlace - full step 57.216 ms
+[INFO   ] DREAMPlace - optimizer step 38.333 ms
+[INFO   ] DREAMPlace - iteration  137, ( 137,  0,  0), Obj 1.523620E+08, DensityWeight 3.244951E-07, wHPWL 3.150192E+04, Overflow 9.707146E-01, MaxDensity 1.076E+02, gamma 5.632442E+00, time 9.442ms
+[INFO   ] DREAMPlace - full step 48.205 ms
+[INFO   ] DREAMPlace - optimizer step 25.653 ms
+[INFO   ] DREAMPlace - iteration  138, ( 138,  0,  0), Obj 1.169098E+06, DensityWeight 3.406707E-07, wHPWL 2.719359E+04, Overflow 9.655114E-01, MaxDensity 5.400E+01, gamma 5.734199E+00, time 3.287ms
+[INFO   ] DREAMPlace - full step 29.379 ms
+[INFO   ] DREAMPlace - optimizer step 86.107 ms
+[INFO   ] DREAMPlace - iteration  139, ( 139,  0,  0), Obj 2.446367E+06, DensityWeight 3.527663E-07, wHPWL 2.517158E+04, Overflow 9.647655E-01, MaxDensity 4.666E+01, gamma 5.583543E+00, time 3.460ms
+[INFO   ] DREAMPlace - full step 90.060 ms
+[INFO   ] DREAMPlace - optimizer step 52.913 ms
+[INFO   ] DREAMPlace - iteration  140, ( 140,  0,  0), Obj 1.088784E+07, DensityWeight 3.652548E-07, wHPWL 1.809887E+04, Overflow 9.679341E-01, MaxDensity 4.500E+01, gamma 5.562275E+00, time 8.347ms
+[INFO   ] DREAMPlace - full step 68.278 ms
+[INFO   ] DREAMPlace - optimizer step 28.080 ms
+[INFO   ] DREAMPlace - iteration  141, ( 141,  0,  0), Obj 3.602758E+05, DensityWeight 3.781476E-07, wHPWL 2.124581E+04, Overflow 9.645971E-01, MaxDensity 3.000E+01, gamma 5.653192E+00, time 3.251ms
+[INFO   ] DREAMPlace - full step 31.817 ms
+[INFO   ] DREAMPlace - optimizer step 52.655 ms
+[INFO   ] DREAMPlace - iteration  142, ( 142,  0,  0), Obj 2.004930E+06, DensityWeight 3.968809E-07, wHPWL 1.869615E+04, Overflow 9.654472E-01, MaxDensity 3.066E+01, gamma 5.557487E+00, time 3.410ms
+[INFO   ] DREAMPlace - full step 56.516 ms
+[INFO   ] DREAMPlace - optimizer step 52.544 ms
+[INFO   ] DREAMPlace - iteration  143, ( 143,  0,  0), Obj 1.117010E+05, DensityWeight 4.108079E-07, wHPWL 1.761484E+04, Overflow 9.646420E-01, MaxDensity 2.745E+01, gamma 5.581714E+00, time 3.508ms
+[INFO   ] DREAMPlace - full step 56.514 ms
+[INFO   ] DREAMPlace - optimizer step 26.877 ms
+[INFO   ] DREAMPlace - iteration  144, ( 144,  0,  0), Obj 2.004910E+06, DensityWeight 4.251810E-07, wHPWL 1.556498E+04, Overflow 9.659119E-01, MaxDensity 3.203E+01, gamma 5.558761E+00, time 3.443ms
+[INFO   ] DREAMPlace - full step 30.769 ms
+[INFO   ] DREAMPlace - optimizer step 54.459 ms
+[INFO   ] DREAMPlace - iteration  145, ( 145,  0,  0), Obj 6.991102E+04, DensityWeight 4.400131E-07, wHPWL 1.569153E+04, Overflow 9.645783E-01, MaxDensity 2.750E+01, gamma 5.594999E+00, time 3.433ms
+[INFO   ] DREAMPlace - full step 58.330 ms
+[INFO   ] DREAMPlace - optimizer step 55.388 ms
+[INFO   ] DREAMPlace - iteration  146, ( 146,  0,  0), Obj 1.847340E+06, DensityWeight 4.620056E-07, wHPWL 1.441459E+04, Overflow 9.664263E-01, MaxDensity 2.766E+01, gamma 5.556951E+00, time 6.000ms
+[INFO   ] DREAMPlace - full step 61.856 ms
+[INFO   ] DREAMPlace - optimizer step 24.548 ms
+[INFO   ] DREAMPlace - iteration  147, ( 147,  0,  0), Obj 7.358894E+04, DensityWeight 4.780267E-07, wHPWL 1.453215E+04, Overflow 9.645779E-01, MaxDensity 2.723E+01, gamma 5.609745E+00, time 3.474ms
+[INFO   ] DREAMPlace - full step 28.460 ms
+[INFO   ] DREAMPlace - optimizer step 49.791 ms
+[INFO   ] DREAMPlace - iteration  148, ( 148,  0,  0), Obj 7.872242E+05, DensityWeight 5.019198E-07, wHPWL 1.375693E+04, Overflow 9.670675E-01, MaxDensity 3.260E+01, gamma 5.556939E+00, time 3.260ms
+[INFO   ] DREAMPlace - full step 53.456 ms
+[INFO   ] DREAMPlace - optimizer step 27.615 ms
+[INFO   ] DREAMPlace - iteration  149, ( 149,  0,  0), Obj 1.226726E+05, DensityWeight 5.192210E-07, wHPWL 1.349449E+04, Overflow 9.646477E-01, MaxDensity 2.666E+01, gamma 5.628179E+00, time 3.473ms
+[INFO   ] DREAMPlace - full step 31.562 ms
+[INFO   ] DREAMPlace - optimizer step 56.014 ms
+[INFO   ] DREAMPlace - iteration  150, ( 150,  0,  0), Obj 8.718038E+05, DensityWeight 5.370650E-07, wHPWL 1.309251E+04, Overflow 9.659721E-01, MaxDensity 3.456E+01, gamma 5.558924E+00, time 3.698ms
+[INFO   ] DREAMPlace - full step 60.121 ms
+[INFO   ] DREAMPlace - optimizer step 29.005 ms
+[INFO   ] DREAMPlace - iteration  151, ( 151,  0,  0), Obj 1.185590E+05, DensityWeight 5.554666E-07, wHPWL 1.297098E+04, Overflow 9.645789E-01, MaxDensity 2.466E+01, gamma 5.596722E+00, time 5.158ms
+[INFO   ] DREAMPlace - full step 36.549 ms
+[INFO   ] DREAMPlace - optimizer step 24.019 ms
+[INFO   ] DREAMPlace - iteration  152, ( 152,  0,  0), Obj 6.728990E+05, DensityWeight 5.744413E-07, wHPWL 1.249372E+04, Overflow 9.661779E-01, MaxDensity 2.844E+01, gamma 5.556965E+00, time 3.513ms
+[INFO   ] DREAMPlace - full step 27.985 ms
+[INFO   ] DREAMPlace - optimizer step 25.620 ms
+[INFO   ] DREAMPlace - iteration  153, ( 153,  0,  0), Obj 1.103133E+05, DensityWeight 5.940047E-07, wHPWL 1.261185E+04, Overflow 9.646248E-01, MaxDensity 2.300E+01, gamma 5.602622E+00, time 3.339ms
+[INFO   ] DREAMPlace - full step 29.398 ms
+[INFO   ] DREAMPlace - optimizer step 23.018 ms
+[INFO   ] DREAMPlace - iteration  154, ( 154,  0,  0), Obj 6.012112E+05, DensityWeight 6.236946E-07, wHPWL 1.232318E+04, Overflow 9.665620E-01, MaxDensity 3.066E+01, gamma 5.558273E+00, time 3.176ms
+[INFO   ] DREAMPlace - full step 26.635 ms
+[INFO   ] DREAMPlace - optimizer step 24.830 ms
+[INFO   ] DREAMPlace - iteration  155, ( 155,  0,  0), Obj 1.187502E+05, DensityWeight 6.448065E-07, wHPWL 1.233201E+04, Overflow 9.647813E-01, MaxDensity 2.728E+01, gamma 5.613643E+00, time 3.086ms
+[INFO   ] DREAMPlace - full step 28.352 ms
+[INFO   ] DREAMPlace - optimizer step 23.022 ms
+[INFO   ] DREAMPlace - iteration  156, ( 156,  0,  0), Obj 2.919852E+05, DensityWeight 6.770459E-07, wHPWL 1.202542E+04, Overflow 9.658614E-01, MaxDensity 3.100E+01, gamma 5.562726E+00, time 3.139ms
+[INFO   ] DREAMPlace - full step 26.603 ms
+[INFO   ] DREAMPlace - optimizer step 24.426 ms
+[INFO   ] DREAMPlace - iteration  157, ( 157,  0,  0), Obj 1.725020E+05, DensityWeight 6.998237E-07, wHPWL 1.199366E+04, Overflow 9.648764E-01, MaxDensity 2.825E+01, gamma 5.593553E+00, time 3.376ms
+[INFO   ] DREAMPlace - full step 28.240 ms
+[INFO   ] DREAMPlace - optimizer step 25.014 ms
+[INFO   ] DREAMPlace - iteration  158, ( 158,  0,  0), Obj 3.579521E+05, DensityWeight 7.232955E-07, wHPWL 1.185919E+04, Overflow 9.653103E-01, MaxDensity 2.566E+01, gamma 5.565433E+00, time 3.191ms
+[INFO   ] DREAMPlace - full step 28.628 ms
+[INFO   ] DREAMPlace - optimizer step 23.355 ms
+[INFO   ] DREAMPlace - iteration  159, ( 159,  0,  0), Obj 2.505425E+05, DensityWeight 7.474798E-07, wHPWL 1.177681E+04, Overflow 9.653792E-01, MaxDensity 2.666E+01, gamma 5.577804E+00, time 3.186ms
+[INFO   ] DREAMPlace - full step 26.968 ms
+[INFO   ] DREAMPlace - optimizer step 23.159 ms
+[INFO   ] DREAMPlace - iteration  160, ( 160,  0,  0), Obj 2.846308E+05, DensityWeight 7.723954E-07, wHPWL 1.165139E+04, Overflow 9.653838E-01, MaxDensity 2.570E+01, gamma 5.579769E+00, time 3.090ms
+[INFO   ] DREAMPlace - full step 26.667 ms
+[INFO   ] DREAMPlace - optimizer step 25.072 ms
+[INFO   ] DREAMPlace - iteration  161, ( 161,  0,  0), Obj 2.474190E+05, DensityWeight 7.980616E-07, wHPWL 1.159233E+04, Overflow 9.647670E-01, MaxDensity 2.600E+01, gamma 5.579903E+00, time 3.303ms
+[INFO   ] DREAMPlace - full step 28.841 ms
+[INFO   ] DREAMPlace - optimizer step 24.975 ms
+[INFO   ] DREAMPlace - iteration  162, ( 162,  0,  0), Obj 2.767897E+05, DensityWeight 8.244984E-07, wHPWL 1.151938E+04, Overflow 9.647987E-01, MaxDensity 2.266E+01, gamma 5.562319E+00, time 3.234ms
+[INFO   ] DREAMPlace - full step 28.654 ms
+[INFO   ] DREAMPlace - optimizer step 26.347 ms
+[INFO   ] DREAMPlace - iteration  163, ( 163,  0,  0), Obj 2.479228E+05, DensityWeight 8.517258E-07, wHPWL 1.145312E+04, Overflow 9.647385E-01, MaxDensity 2.366E+01, gamma 5.563220E+00, time 3.172ms
+[INFO   ] DREAMPlace - full step 29.978 ms
+[INFO   ] DREAMPlace - optimizer step 24.015 ms
+[INFO   ] DREAMPlace - iteration  164, ( 164,  0,  0), Obj 2.829656E+05, DensityWeight 8.797643E-07, wHPWL 1.138863E+04, Overflow 9.648946E-01, MaxDensity 2.375E+01, gamma 5.561507E+00, time 3.226ms
+[INFO   ] DREAMPlace - full step 27.706 ms
+[INFO   ] DREAMPlace - optimizer step 24.678 ms
+[INFO   ] DREAMPlace - iteration  165, ( 165,  0,  0), Obj 2.491591E+05, DensityWeight 9.086349E-07, wHPWL 1.135730E+04, Overflow 9.646217E-01, MaxDensity 2.331E+01, gamma 5.565952E+00, time 2.971ms
+[INFO   ] DREAMPlace - full step 28.095 ms
+[INFO   ] DREAMPlace - optimizer step 22.834 ms
+[INFO   ] DREAMPlace - iteration  166, ( 166,  0,  0), Obj 2.793607E+05, DensityWeight 9.383591E-07, wHPWL 1.130761E+04, Overflow 9.648759E-01, MaxDensity 2.448E+01, gamma 5.558186E+00, time 3.032ms
+[INFO   ] DREAMPlace - full step 26.310 ms
+[INFO   ] DREAMPlace - optimizer step 24.870 ms
+[INFO   ] DREAMPlace - iteration  167, ( 167,  0,  0), Obj 2.562538E+05, DensityWeight 9.689587E-07, wHPWL 1.128471E+04, Overflow 9.646873E-01, MaxDensity 2.500E+01, gamma 5.565419E+00, time 3.160ms
+[INFO   ] DREAMPlace - full step 28.477 ms
+[INFO   ] DREAMPlace - optimizer step 23.413 ms
+[INFO   ] DREAMPlace - iteration  168, ( 168,  0,  0), Obj 2.743982E+05, DensityWeight 1.000456E-06, wHPWL 1.123273E+04, Overflow 9.646506E-01, MaxDensity 2.366E+01, gamma 5.560050E+00, time 3.301ms
+[INFO   ] DREAMPlace - full step 27.171 ms
+[INFO   ] DREAMPlace - optimizer step 23.704 ms
+[INFO   ] DREAMPlace - iteration  169, ( 169,  0,  0), Obj 2.502082E+05, DensityWeight 1.032874E-06, wHPWL 1.120446E+04, Overflow 9.646121E-01, MaxDensity 2.460E+01, gamma 5.559008E+00, time 3.167ms
+[INFO   ] DREAMPlace - full step 27.316 ms
+[INFO   ] DREAMPlace - optimizer step 24.861 ms
+[INFO   ] DREAMPlace - iteration  170, ( 170,  0,  0), Obj 2.597078E+05, DensityWeight 1.066236E-06, wHPWL 1.117128E+04, Overflow 9.646464E-01, MaxDensity 2.500E+01, gamma 5.557909E+00, time 3.174ms
+[INFO   ] DREAMPlace - full step 28.483 ms
+[INFO   ] DREAMPlace - optimizer step 24.014 ms
+[INFO   ] DREAMPlace - iteration  171, ( 171,  0,  0), Obj 2.435040E+05, DensityWeight 1.100565E-06, wHPWL 1.115958E+04, Overflow 9.645852E-01, MaxDensity 2.366E+01, gamma 5.558886E+00, time 3.137ms
+[INFO   ] DREAMPlace - full step 27.609 ms
+[INFO   ] DREAMPlace - optimizer step 24.606 ms
+[INFO   ] DREAMPlace - iteration  172, ( 172,  0,  0), Obj 2.670470E+05, DensityWeight 1.135886E-06, wHPWL 1.112961E+04, Overflow 9.648676E-01, MaxDensity 2.366E+01, gamma 5.557147E+00, time 3.143ms
+[INFO   ] DREAMPlace - full step 28.176 ms
+[INFO   ] DREAMPlace - optimizer step 25.109 ms
+[INFO   ] DREAMPlace - iteration  173, ( 173,  0,  0), Obj 2.356781E+05, DensityWeight 1.172224E-06, wHPWL 1.109711E+04, Overflow 9.650823E-01, MaxDensity 2.363E+01, gamma 5.565182E+00, time 3.220ms
+[INFO   ] DREAMPlace - full step 28.749 ms
+[INFO   ] DREAMPlace - optimizer step 25.208 ms
+[INFO   ] DREAMPlace - iteration  174, ( 174,  0,  0), Obj 2.470637E+05, DensityWeight 1.209603E-06, wHPWL 1.105558E+04, Overflow 9.649012E-01, MaxDensity 2.264E+01, gamma 5.571299E+00, time 3.108ms
+[INFO   ] DREAMPlace - full step 28.729 ms
+[INFO   ] DREAMPlace - optimizer step 25.812 ms
+[INFO   ] DREAMPlace - iteration  175, ( 175,  0,  0), Obj 2.433381E+05, DensityWeight 1.248049E-06, wHPWL 1.101778E+04, Overflow 9.647960E-01, MaxDensity 2.218E+01, gamma 5.566138E+00, time 3.232ms
+[INFO   ] DREAMPlace - full step 29.444 ms
+[INFO   ] DREAMPlace - optimizer step 25.073 ms
+[INFO   ] DREAMPlace - iteration  176, ( 176,  0,  0), Obj 2.486329E+05, DensityWeight 1.287588E-06, wHPWL 1.099362E+04, Overflow 9.647248E-01, MaxDensity 2.364E+01, gamma 5.563143E+00, time 3.291ms
+[INFO   ] DREAMPlace - full step 28.765 ms
+[INFO   ] DREAMPlace - optimizer step 25.664 ms
+[INFO   ] DREAMPlace - iteration  177, ( 177,  0,  0), Obj 2.313180E+05, DensityWeight 1.328247E-06, wHPWL 1.097854E+04, Overflow 9.646754E-01, MaxDensity 2.166E+01, gamma 5.561119E+00, time 3.204ms
+[INFO   ] DREAMPlace - full step 29.275 ms
+[INFO   ] DREAMPlace - optimizer step 26.262 ms
+[INFO   ] DREAMPlace - iteration  178, ( 178,  0,  0), Obj 2.263869E+05, DensityWeight 1.370053E-06, wHPWL 1.097882E+04, Overflow 9.646440E-01, MaxDensity 2.088E+01, gamma 5.559710E+00, time 3.448ms
+[INFO   ] DREAMPlace - full step 30.122 ms
+[INFO   ] DREAMPlace - optimizer step 25.086 ms
+[INFO   ] DREAMPlace - iteration  179, ( 179,  0,  0), Obj 2.180439E+05, DensityWeight 1.438555E-06, wHPWL 1.097664E+04, Overflow 9.645909E-01, MaxDensity 2.166E+01, gamma 5.558819E+00, time 3.236ms
+[INFO   ] DREAMPlace - full step 28.739 ms
+[INFO   ] DREAMPlace - optimizer step 27.365 ms
+[INFO   ] DREAMPlace - iteration  180, ( 180,  0,  0), Obj 2.245233E+05, DensityWeight 1.483536E-06, wHPWL 1.097416E+04, Overflow 9.645844E-01, MaxDensity 2.254E+01, gamma 5.557307E+00, time 3.237ms
+[INFO   ] DREAMPlace - full step 31.015 ms
+[INFO   ] DREAMPlace - optimizer step 25.642 ms
+[INFO   ] DREAMPlace - iteration  181, ( 181,  0,  0), Obj 2.116258E+05, DensityWeight 1.529770E-06, wHPWL 1.097142E+04, Overflow 9.646870E-01, MaxDensity 2.200E+01, gamma 5.557122E+00, time 3.178ms
+[INFO   ] DREAMPlace - full step 29.223 ms
+[INFO   ] DREAMPlace - optimizer step 26.411 ms
+[INFO   ] DREAMPlace - iteration  182, ( 182,  0,  0), Obj 2.247821E+05, DensityWeight 1.577288E-06, wHPWL 1.095556E+04, Overflow 9.646536E-01, MaxDensity 2.166E+01, gamma 5.560041E+00, time 3.203ms
+[INFO   ] DREAMPlace - full step 30.032 ms
+[INFO   ] DREAMPlace - optimizer step 26.582 ms
+[INFO   ] DREAMPlace - iteration  183, ( 183,  0,  0), Obj 2.180700E+05, DensityWeight 1.626119E-06, wHPWL 1.095048E+04, Overflow 9.645795E-01, MaxDensity 2.203E+01, gamma 5.559092E+00, time 3.262ms
+[INFO   ] DREAMPlace - full step 30.254 ms
+[INFO   ] DREAMPlace - optimizer step 26.853 ms
+[INFO   ] DREAMPlace - iteration  184, ( 184,  0,  0), Obj 2.236424E+05, DensityWeight 1.676294E-06, wHPWL 1.093991E+04, Overflow 9.645795E-01, MaxDensity 2.200E+01, gamma 5.556985E+00, time 3.248ms
+[INFO   ] DREAMPlace - full step 30.515 ms
+[INFO   ] DREAMPlace - optimizer step 26.366 ms
+[INFO   ] DREAMPlace - iteration  185, ( 185,  0,  0), Obj 2.138315E+05, DensityWeight 1.727844E-06, wHPWL 1.093489E+04, Overflow 9.645796E-01, MaxDensity 2.100E+01, gamma 5.556985E+00, time 3.335ms
+[INFO   ] DREAMPlace - full step 30.119 ms
+[INFO   ] DREAMPlace - optimizer step 24.959 ms
+[INFO   ] DREAMPlace - iteration  186, ( 186,  0,  0), Obj 2.179843E+05, DensityWeight 1.780802E-06, wHPWL 1.092556E+04, Overflow 9.645799E-01, MaxDensity 2.176E+01, gamma 5.556988E+00, time 3.802ms
+[INFO   ] DREAMPlace - full step 29.253 ms
+[INFO   ] DREAMPlace - Stuck at early stage. Turn on quadratic penalty with double density factor to accelerate convergence
+[INFO   ] DREAMPlace - Stuck at very early stage. Turn on entropy injection with noise intensity = 51.66395187377933 to help convergence
+[INFO   ] DREAMPlace - optimizer step 48.482 ms
+[INFO   ] DREAMPlace - iteration  187, ( 187,  0,  0), Obj 2.093517E+05, DensityWeight 1.835199E-06, wHPWL 2.999587E+04, Overflow 9.661922E-01, MaxDensity 9.192E+01, gamma 5.556999E+00, time 3.718ms
+[INFO   ] DREAMPlace - full step 52.615 ms
+[INFO   ] DREAMPlace - optimizer nesterov takes 6.628 seconds
+[INFO   ] DREAMPlace - non-linear placement takes 6.63 seconds
+[INFO   ] DREAMPlace - writing to results/1_synth/1_synth.gp.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.001 seconds
+[INFO   ] DREAMPlace - placement takes 6.723 seconds
+ups done
+[DEBUG  ] num_terminals 4176, numFixed 48, numPlaceBlockages 0, num_terminal_NIs 54
+[INFO   ] -- Converting Node Orientation --
+[INFO   ] FN -> N: 1044 nodes
+[INFO   ] FS -> N: 1044 nodes
+[INFO   ] S -> N: 1044 nodes
+[INFO   ] ---------------------------------
+[INFO   ] -------- Area Statistics --------
+[INFO   ] fixed area overlap = 6.5371e+08
+[INFO   ] fixed area total = 1.25635e+09
+[INFO   ] space area = 3.94277e+09
+[INFO   ] ---------------------------------
+[DEBUG  ] deterministic mode: integer 32 bits, fraction 32 bits, scale factor 4294967296
+[DEBUG  ] deterministic mode: integer 32 bits, fraction 32 bits, scale factor 4294967296
+[INFO   ] writing placement to results/1_synth/1_synth.gp.def
