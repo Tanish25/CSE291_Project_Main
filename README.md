@@ -22,3 +22,19 @@ We have segregated this repository into four directories -
 ## transport_informed_dreamplace
 Contains our fork of the DREAMPlace repository with our implementation of the Flow Based Density Overflow operation. When you navigate to this forked submodule, please view the top of the README, which contains a link to our code. We've included our report at this level of the repo as well titled: Transport Informed Gradient Fields for DREAMPlace.
 
+**Note:** Please visit the `transport_informed_dreamplace` submodule to see our implementation of the Transport-Informed DREAMPlace. Our implementation can be used exactly as you would use the original DREAMPlace.
+
+## Cloning Instructions
+
+To ensure the submodule is properly cloned when cloning this repository, use:
+
+```bash
+git clone --recurse-submodules <repository-url>
+```
+
+If you've already cloned the repository without submodules, you can initialize and update them with:
+
+```bash
+git submodule update --init --recursive
+```
+
