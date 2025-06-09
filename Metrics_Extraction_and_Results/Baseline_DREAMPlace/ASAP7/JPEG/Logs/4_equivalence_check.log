@@ -1,0 +1,5 @@
+EQY 19:48:20 [./logs/asap7/jpeg/base/4_eqy_output] read_gold: starting process "yosys -ql ./logs/asap7/jpeg/base/4_eqy_output/gold.log ./logs/asap7/jpeg/base/4_eqy_output/gold.ys"
+EQY 19:48:21 [./logs/asap7/jpeg/base/4_eqy_output] read_gate: starting process "yosys -ql ./logs/asap7/jpeg/base/4_eqy_output/gate.log ./logs/asap7/jpeg/base/4_eqy_output/gate.ys"
+EQY ---- Keyboard interrupt or external termination signal ----
+EQY 19:48:49 [./logs/asap7/jpeg/base/4_eqy_output] read_gold: terminating process
+EQY 19:48:49 [./logs/asap7/jpeg/base/4_eqy_output] read_gate: terminating process

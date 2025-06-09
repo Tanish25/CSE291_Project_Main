@@ -1,0 +1,150 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+source /OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+clock_tree_synthesis -sink_clustering_enable -balance_levels -sink_clustering_size 50 -sink_clustering_max_diameter 20
+[INFO CTS-0050] Root buffer is BUFx2_ASAP7_75t_R.
+[INFO CTS-0051] Sink buffer is BUFx4_ASAP7_75t_R.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    BUFx2_ASAP7_75t_R
+                    BUFx4_ASAP7_75t_R
+[INFO CTS-0049] Characterization buffer is BUFx4_ASAP7_75t_R.
+[INFO CTS-0007] Net "clk" found for clock "core_clock".
+[INFO CTS-0010]  Clock net "clk" has 35 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 2 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 35.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 50 and with maximum cluster diameter of 20.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 1350  dbu (1 um).
+[INFO CTS-0023]  Original sink region: [(1447, 4185), (12787, 13365)].
+[INFO CTS-0024]  Normalized sink region: [(1.07185, 3.1), (9.47185, 9.9)].
+[INFO CTS-0025]     Width:  8.4000.
+[INFO CTS-0026]     Height: 6.8000.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 18
+    Sub-region size: 4.2000 X 6.8000
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 9
+    Sub-region size: 4.2000 X 3.4000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 35.
+[INFO CTS-0018]     Created 5 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 5 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 8:2, 9:1, 10:1..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 38
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 18.24 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 3
+[INFO RSZ-0058] Using max wire length 162um.
+Placement Analysis
+---------------------------------
+total displacement          1.9 u
+average displacement        0.0 u
+max displacement            0.7 u
+original HPWL             934.4 u
+legalized HPWL            967.4 u
+delta HPWL                    4 %
+
+repair_timing -verbose -setup_margin 0 -hold_margin 0 -repair_tns 100 -skip_last_gasp
+[INFO RSZ-0094] Found 44 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 44 out of 44 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |  -99.110 |    -1557.6 |     44 | resp_msg[13]
+       10 |       0 |       0 |       18 |      0 |     5 |    +2.5% |  -91.775 |    -1489.0 |     44 | resp_msg[13]
+       20 |       0 |       2 |       34 |      0 |     8 |    +4.4% |  -66.513 |     -595.4 |     44 | resp_msg[13]
+       30 |       0 |       5 |       40 |      0 |    13 |    +5.2% |  -64.873 |     -460.3 |     44 | resp_msg[13]
+       31 |       0 |       5 |       42 |      0 |    13 |    +5.4% |  -63.883 |     -455.1 |     44 | resp_msg[13]
+       38 |       0 |       5 |       43 |      0 |    13 |    +5.4% |  -63.883 |     -455.1 |     44 | resp_msg[13]
+       40 |       0 |       5 |       43 |      0 |    14 |    +5.4% |  -63.789 |     -456.0 |     44 | resp_msg[13]
+       41 |       0 |       5 |       43 |      0 |    14 |    +5.4% |  -63.789 |     -456.0 |     44 | resp_msg[13]
+       44 |       0 |       5 |       43 |      0 |    15 |    +5.4% |  -63.789 |     -454.8 |     44 | resp_msg[13]
+       46 |       0 |       5 |       43 |      0 |    16 |    +5.4% |  -63.789 |     -454.1 |     44 | resp_msg[13]
+       50 |       0 |       6 |       45 |      0 |    17 |    +5.6% |  -63.781 |     -454.4 |     44 | resp_msg[13]
+       58 |       0 |       8 |       49 |      0 |    19 |    +6.0% |  -63.781 |     -447.7 |     44 | resp_msg[13]
+       60 |       0 |       8 |       49 |      0 |    20 |    +6.0% |  -63.864 |     -446.3 |     44 | resp_msg[13]
+       61 |       0 |       8 |       49 |      0 |    19 |    +6.0% |  -63.781 |     -447.7 |     44 | resp_msg[13]
+       70 |       0 |       9 |       53 |      0 |    24 |    +6.3% |  -63.781 |     -444.5 |     44 | resp_msg[13]
+       72 |       0 |      10 |       53 |      0 |    25 |    +6.4% |  -63.781 |     -442.9 |     44 | resp_msg[13]
+       75 |       0 |      10 |       53 |      0 |    27 |    +6.4% |  -63.695 |     -442.7 |     44 | resp_msg[13]
+       79 |       0 |      10 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -400.9 |     42 | resp_msg[13]
+       80 |       0 |      10 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -400.9 |     42 | resp_msg[13]
+       80 |       0 |      10 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -400.9 |     41 | resp_msg[13]
+       81 |       0 |      10 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -400.9 |     40 | resp_msg[13]
+       82 |       0 |      10 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -400.9 |     39 | resp_msg[13]
+       85 |       0 |      10 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -400.9 |     39 | resp_msg[13]
+       86 |       0 |      10 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -400.9 |     38 | resp_msg[13]
+       90 |       0 |      12 |       57 |      0 |    30 |    +7.0% |  -61.729 |     -399.8 |     38 | resp_msg[13]
+       90 |       0 |      11 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -399.6 |     38 | resp_msg[13]
+       91 |       0 |      11 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -399.6 |     37 | resp_msg[13]
+       92 |       0 |      11 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -399.6 |     36 | resp_msg[13]
+       93 |       0 |      11 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -399.6 |     35 | resp_msg[13]
+       94 |       0 |      11 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -399.6 |     34 | resp_msg[13]
+       95 |       0 |      11 |       57 |      0 |    29 |    +6.9% |  -61.729 |     -399.6 |     33 | resp_msg[13]
+       98 |       0 |      12 |       57 |      1 |    29 |    +7.2% |  -61.729 |     -391.5 |     31 | resp_msg[13]
+       99 |       0 |      12 |       57 |      1 |    29 |    +7.2% |  -61.729 |     -391.5 |     30 | resp_msg[13]
+      100 |       0 |      12 |       57 |      1 |    29 |    +7.2% |  -61.729 |     -391.5 |     30 | resp_msg[13]
+      101 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     28 | resp_msg[13]
+      102 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     27 | resp_msg[13]
+      103 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     26 | resp_msg[13]
+      104 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     25 | resp_msg[13]
+      105 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     24 | resp_msg[13]
+      106 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     23 | resp_msg[13]
+      107 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     22 | resp_msg[13]
+      108 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     21 | resp_msg[13]
+      109 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     20 | resp_msg[13]
+      110 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     20 | resp_msg[13]
+      110 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     19 | resp_msg[13]
+      111 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     18 | resp_msg[13]
+      112 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     17 | resp_msg[13]
+      113 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     16 | resp_msg[13]
+      114 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     15 | resp_msg[13]
+      115 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     14 | resp_msg[13]
+      116 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     13 | resp_msg[13]
+      117 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     12 | resp_msg[13]
+      118 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     11 | resp_msg[13]
+      119 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     10 | resp_msg[13]
+      120 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |     10 | resp_msg[13]
+      120 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |      9 | resp_msg[13]
+      121 |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |      8 | resp_msg[13]
+    final |       0 |      13 |       57 |      1 |    29 |    +7.3% |  -61.729 |     -390.4 |      8 | resp_msg[13]
+--------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 38 buffers.
+[INFO RSZ-0041] Resized 13 instances.
+[INFO RSZ-0043] Swapped pins on 29 instances.
+[INFO RSZ-0049] Cloned 1 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0033] No hold violations found.
+Placement Analysis
+---------------------------------
+total displacement         16.0 u
+average displacement        0.0 u
+max displacement            0.8 u
+original HPWL            1000.7 u
+legalized HPWL           1017.3 u
+delta HPWL                    2 %
+
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 47 u^2 24% utilization.
+Elapsed time: 0:05.91[h:]min:sec. CPU time: user 4.56 sys 2.07 (112%). Peak memory: 578352KB.

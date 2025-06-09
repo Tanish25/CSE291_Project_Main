@@ -1,0 +1,89 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+clock_tree_synthesis -sink_clustering_enable -balance_levels -sink_clustering_size 50 -sink_clustering_max_diameter 20
+[INFO CTS-0050] Root buffer is CLKBUF_X3.
+[INFO CTS-0051] Sink buffer is CLKBUF_X3.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    CLKBUF_X3
+[INFO CTS-0049] Characterization buffer is CLKBUF_X3.
+[INFO CTS-0007] Net "clk" found for clock "core_clock".
+[INFO CTS-0010]  Clock net "clk" has 35 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 35.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 50 and with maximum cluster diameter of 20.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 14000  dbu (7 um).
+[INFO CTS-0023]  Original sink region: [(5890, 7170), (67070, 65660)].
+[INFO CTS-0024]  Normalized sink region: [(0.420714, 0.512143), (4.79071, 4.69)].
+[INFO CTS-0025]     Width:  4.3700.
+[INFO CTS-0026]     Height: 4.1779.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 18
+    Sub-region size: 2.1850 X 4.1779
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 9
+    Sub-region size: 2.1850 X 2.0889
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 35.
+[INFO CTS-0018]     Created 5 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 5 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 5:1, 8:1, 10:1, 12:1..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 38
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 54.77 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 3
+[INFO RSZ-0058] Using max wire length 640um.
+Placement Analysis
+---------------------------------
+total displacement         39.8 u
+average displacement        0.1 u
+max displacement            2.7 u
+original HPWL            2939.2 u
+legalized HPWL           3040.2 u
+delta HPWL                    3 %
+
+repair_timing -verbose -setup_margin 0 -hold_margin 0 -repair_tns 100
+[INFO RSZ-0094] Found 35 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 35 out of 35 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -0.086 |       -1.1 |     35 | resp_msg[11]
+       10 |       0 |       9 |        0 |      0 |     0 |    +0.7% |   -0.072 |       -0.7 |     35 | resp_msg[13]
+       20 |       0 |      17 |        2 |      0 |     1 |    +1.5% |   -0.064 |       -0.6 |     35 | resp_msg[11]
+       30 |       0 |      24 |        6 |      0 |     2 |    +2.5% |   -0.059 |       -0.5 |     35 | resp_msg[11]
+       40 |       0 |      33 |        8 |      0 |     2 |    +3.8% |   -0.065 |       -0.5 |     35 | resp_msg[11]
+       50 |       0 |      33 |       28 |      0 |     2 |    +5.0% |   -0.065 |       -0.5 |     35 | resp_msg[11]
+       60 |       0 |      39 |       36 |      0 |     2 |    +6.2% |   -0.057 |       -0.6 |     35 | dpath.a_reg.out\[5\]$_DFFE_PP_/D
+       70 |       0 |      48 |       38 |      0 |     2 |    +7.0% |   -0.054 |       -0.5 |     35 | resp_msg[10]
+       80 |       0 |      54 |       47 |      0 |     2 |    +8.4% |   -0.051 |       -0.5 |     35 | resp_msg[10]
+       90 |       0 |      56 |       61 |      0 |     3 |    +9.5% |   -0.071 |       -0.8 |     35 | resp_msg[14]
+      100 |       0 |      58 |       75 |      0 |     4 |   +10.7% |   -0.069 |       -1.1 |     35 | resp_msg[14]
+      110 |       0 |      63 |       78 |      0 |     8 |   +11.4% |   -0.067 |       -0.8 |     35 | resp_msg[14]
+      120 |       0 |      71 |       78 |      0 |    10 |   +12.3% |   -0.064 |       -0.7 |     35 | resp_msg[14]
+      130 |       0 |      80 |       78 |      0 |    11 |   +13.1% |   -0.061 |       -0.7 |     35 | dpath.a_reg.out\[12\]$_DFFE_PP_/D
+      132 |       0 |      58 |       62 |      0 |     3 |    +8.5% |   -0.051 |       -0.5 |     35 | resp_msg[13]
+      140 |       0 |      63 |       64 |      0 |     4 |    +9.2% |   -0.065 |       -0.7 |     35 | resp_msg[14]
+      150 |       0 |      68 |       72 |      0 |     5 |   +10.6% |   -0.073 |       -0.7 |     35 | resp_msg[14]
+      160 |       0 |      74 |       79 |      0 |     6 |   +12.3% |   -0.072 |       -1.0 |     35 | resp_msg[14]
+      170 |       0 |      83 |       79 |      0 |     7 |   +13.1% |   -0.072 |       -1.0 |     35 | resp_msg[14]
+      180 |       0 |      92 |       79 |      0 |     8 |   +14.5% |   -0.072 |       -1.0 |     35 | resp_msg[14]
+      180 |       0 |      68 |       70 |      0 |     4 |    +8.7% |   -0.051 |       -0.5 |     35 | resp_msg[13]
+      190 |       0 |      73 |       76 |      0 |     5 |    +9.9% |   -0.071 |       -0.8 |     35 | resp_msg[14]
+      200 |       0 |      73 |       96 |      0 |     5 |   +11.1% |   -0.071 |       -0.8 |     35 | resp_msg[14]
