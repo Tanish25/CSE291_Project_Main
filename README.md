@@ -3,9 +3,6 @@
 ## DREAMPlace_Baseline_Top
 Contains DREAMPlace source files and testing configurations for the training circuits given for the project.
 
-## Synthetic_Netlist_Generator
-Contains source files for generating netlists based on parameter configurations and source LEF files.
-
 ## Metrics Extraction and Results
 
 This section contains the methods and files that produce/contain Half-Perimeter Wirelength (HPWL) and run time values that are generated during the 'Global Placement' phase in the physical design of chips. The files corresponding to different designs (both training and test dataset) are organized in the spedific design's directory.
