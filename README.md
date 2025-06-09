@@ -1,7 +1,7 @@
 # Project Directory Overview
 
-## DREAMPlace_Baseline_Top
-Contains DREAMPlace source files and testing configurations for the training circuits given for the project.
+## DREAMPlace_baseline
+Contains DREAMPlace source files and testing configurations for the training and test designs given for the project.
 
 ## Metrics Extraction and Results
 
